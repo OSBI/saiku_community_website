@@ -1,4 +1,4 @@
-# (http://community.meteorite.bi)[http://community.meteorite.bi/]
+# [community.meteorite.bi](http://community.meteorite.bi/)
 
 ## Contributing
 
