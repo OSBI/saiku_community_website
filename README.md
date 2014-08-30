@@ -1,5 +1,7 @@
 # [community.meteorite.bi](http://community.meteorite.bi/)
 
+> Under construction, come back later ;)
+
 ## Contributing
 
 1. Fork it!
