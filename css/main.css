@@ -132,7 +132,6 @@ a:hover {
 	text-align: center;
 	text-indent: 0;
 	speak: none;
-	-webkit-font-smoothing: antialiased;
 }
 
 .container > .header .social a:hover .fa {
