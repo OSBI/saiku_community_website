@@ -1,6 +1,8 @@
 # [community.meteorite.bi](http://community.meteorite.bi/)
 
-> Under construction, come back later ;)
+[![saiku-community-website-preview](https://raw.githubusercontent.com/brenopolanski/saiku_community_website/master/image/preview.png)](http://community.meteorite.bi/)
+
+This repository contains the source code of the website [community.meteorite.bi](http://community.meteorite.bi/). If you're looking for the source code of the project, check the official [Saiku](https://github.com/OSBI/saiku) and [Saiku UI](https://github.com/OSBI/saiku-ui) repository.
 
 ## Contributing
 
@@ -14,4 +16,4 @@ English is the universal language nowadays, so please don't create or comment on
 
 ## License
 
-MIT License © Meteorite BI
+[Apache License Version 2](https://github.com/OSBI/saiku_community_website/blob/master/LICENSE) © Meteorite BI
