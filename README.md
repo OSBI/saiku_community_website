@@ -1,6 +1,6 @@
 # [community.meteorite.bi](http://community.meteorite.bi/)
 
-> Under construction, come back later ;)
+[![saiku-community-website-preview](https://raw.githubusercontent.com/brenopolanski/saiku_community_website/master/image/preview.png)](http://community.meteorite.bi/)
 
 ## Contributing
 
