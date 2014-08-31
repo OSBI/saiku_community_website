@@ -1,17 +1,19 @@
 /**
- * Description: Stylesheet Site.
+ * Description: Stylesheet Saiku | Community Meteorite BI.
  * Version: 1.0.0
- * Last update: 2014/08/30
+ * Last update: 2014/08/31
  * Author: Breno Polanski <breno.polanski@gmail.com>
  *
- * Table of Contents:
+ * TABLE OF CONTENTS:
  *
  *	0. GLOBAL
  *	1. DEFAULT
  *		- 1.1. CONTAINER
  *		- 1.2. CONTAINER MEDIA QUERIES
  *		- 1.3. MAIN
- *	2. GRID
+ *	2. BOX GRID
+ *		- 2.1. GENERAL GRID STYLES
+ *		- 2.2. GRID MEDIA QUERIES
  *	3. FOOTER
  *		- 3.1. CREDITS
  */
@@ -44,7 +46,9 @@ html {
 	display: table; 
 }
 
-.clearfix:after { clear: both; }
+.clearfix:after { 
+	clear: both; 
+}
 
 body {
 	font-family: "Lato", Calibri, Arial, sans-serif;
@@ -56,8 +60,8 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
-	color: #000;
+a:hover { 
+	color: #000; 
 }
 
 /* ==========================================================================
@@ -67,18 +71,18 @@ a:hover {
 /* 1.1. CONTAINER
    ========================================================================== */
 
-.container > .header {
+.container > header {
 	width: 90%;
 	max-width: 69em;
 	margin: 0 auto;
 	padding: 2.875em 1.875em 1.875em;
 }
 
-.container > .header .saiku-logo {
-	display: block;
+.container > header .saiku-logo { 
+	display: block; 
 }
 
-.container > .header .description {
+.container > header .description {
 	font-size: 1.500em;
 	line-height: 1.3;
 	margin: 0 0 0.6em 0;
@@ -86,14 +90,14 @@ a:hover {
 	font-weight: 400;
 }
 
-.container > .header .social {
+.container > header .social {
 	position: relative;
 	top: -15px;
 	float: right;
 	text-align: center;
 }
 
-.container > .header .social a {
+.container > header .social a {
 	display: inline-block;
 	position: relative;
 	text-align: left;
@@ -105,11 +109,11 @@ a:hover {
 	border-radius: 50%;
 }
 
-.container > .header .social a > span {
-	display: none;
+.container > header .social a > span { 
+	display: none; 
 }
 
-.container > .header .social a:hover:before {
+.container > header .social a:hover:before {
 	position: absolute;
 	content: attr(data-info);
 	color: #ae1817;
@@ -120,11 +124,11 @@ a:hover {
 	pointer-events: none;
 }
 
-.container > .header .social a:hover {
-	background-color: #ae1817;
+.container > header .social a:hover { 
+	background-color: #ae1817; 
 }
 
-.container > .header .social a .fa {
+.container > header .social a .fa {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -136,26 +140,26 @@ a:hover {
 	text-indent: 0;
 }
 
-.container > .header .social a:hover .fa {
-	color: #fff;
+.container > header .social a:hover .fa { 
+	color: #fff; 
 }
 
 /* 1.2. CONTAINER MEDIA QUERIES
    ========================================================================== */
 
 @media screen and (max-width: 55em) {
-	.container > .header .description,
-	.container > .header .social {
+	.container > header .description,
+	.container > header .social {
 		float: none;
 	}
 
-	.container > .header > .saiku-logo,
-	.container > .header .description {
+	.container > header > .saiku-logo,
+	.container > header .description {
 		text-align: center;
 	}
 
-	.container > .header .social {
-		margin: 30px auto;
+	.container > header .social { 
+		margin: 30px auto; 
 	}
 }
 
@@ -169,19 +173,221 @@ a:hover {
 }
 
 /* ==========================================================================
-   2. GRID
+   2. BOX GRID
    ========================================================================== */
 
-.grid:before, 
-.grid:after { 
+/* 2.1. GENERAL GRID STYLES
+   ========================================================================== */
+
+.box-grid:before, 
+.box-grid:after { 
 	content: " "; 
 	display: table; 
 }
 
-.grid {
+.box-grid:after { 
+	clear: both; 
+}
+
+.box-grid {
 	list-style: none;
 	padding: 0 0 50px 0;
 	margin: 0;
+}
+
+/* grid item */
+
+.box-grid li {
+	width: 33%;
+	float: left;
+	height: 420px;
+	text-align: center;
+	border-top: 1px solid #ddd;
+}
+
+/*
+ * we are using a combination of borders and 
+ * box shadows to control the grid lines
+ */
+
+.box-grid li:nth-child(-n+3) { 
+	border-top: none; 
+}
+
+.box-grid li:nth-child(3n-1),
+.box-grid li:nth-child(3n-2) {
+	box-shadow: 1px 0 0 #ddd;
+}
+
+/* anchor style */
+
+.box-grid li > a {
+	display: block;
+	height: 100%;
+	color: #ae1817;
+	-webkit-transition: background 0.2s;
+	   -moz-transition: background 0.2s;
+	        transition: background 0.2s;
+}
+
+/* the icon with pseudo class for icon font */
+
+.box-icon {
+	padding: 30px 0 0 0;
+	display: block;
+	-webkit-transition: -webkit-transform 0.2s;
+	        transition: -moz-transform 0.2s;
+	        transition: transform 0.2s;
+}
+
+.box-icon:before {
+	font-family: "FontAwesome";
+	font-size: 7em;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1.9;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* title element */
+
+.box-grid .box-title {
+	margin: 20px 0 10px 0;
+	padding: 20px 0 0 0;
+	font-size: 2em;
+	position: relative;
+	-webkit-transition: -webkit-transform 0.2s;
+	   -moz-transition: -moz-transform 0.2s;
+	        transition: transform 0.2s;
+}
+
+.box-grid .box-title:before {
+	content: "";
+	position: absolute;
+	background: #ae1817;
+	width: 160px;
+	height: 6px;
+	top: 0px;
+	left: 50%;
+	margin: -10px 0 0 -80px;
+	-webkit-transition: margin-top 0.2s;
+	   -moz-transition: margin-top 0.2s;
+	        transition: margin-top 0.2s;
+}
+
+.box-grid .box-subtitle {
+	text-transform: uppercase;
+	display: inline-block;
+	font-size: 1em;
+	letter-spacing: 1px;
+	color: #fff;
+	opacity: 0;
+	-webkit-transform: translateY(10px);
+	   -moz-transform: -moz-translateY(10px);
+	    -ms-transform: -ms-translateY(10px);
+	        transform: translateY(10px);
+	
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	   -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	-webkit-transition: transform 0.3s, opacity 0.2s;
+}
+
+.box-grid li:hover .box-subtitle,
+.touch .box-grid li .box-subtitle {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	   -moz-transform: translateY(0px);
+	    -ms-transform: translateY(0px);
+	        transform: translateY(0px);
+}
+
+/* hover styles */
+
+.box-grid li > a:hover {
+	background: #ae1817;
+}
+
+.box-grid li > a:hover .box-icon {
+	-webkit-transform: translateY(10px);
+	   -moz-transform: translateY(10px);
+	    -ms-transform: translateY(10px);
+	        transform: translateY(10px);
+}
+
+.box-grid li > a:hover .box-icon:before,
+.box-grid li > a:hover .box-title {
+	color: #fff;
+}
+
+.box-grid li > a:hover .box-title {
+	-webkit-transform: translateY(-30px);
+	   -moz-transform: translateY(-30px);
+	    -ms-transform: translateY(-30px);
+	        transform: translateY(-30px);
+}
+
+.box-grid li > a:hover .box-title:before {
+	background: #fff;
+	margin-top: 80px;
+}
+
+/* 2.2. GRID MEDIA QUERIES
+   ========================================================================== */
+
+@media screen and (max-width: 62.75em) {
+	.box-grid li {
+		width: 50%;
+	}
+
+	/* reset the grid lines */
+
+	.box-grid li:nth-child(-n+3) {
+		border-top: 1px solid #ddd;
+	}
+
+	.box-grid li:nth-child(3n-1),
+	.box-grid li:nth-child(3n-2) {
+		box-shadow: none;
+	}
+
+	.box-grid li:nth-child(-n+2) {
+		border-top: none;
+	}
+
+	.box-grid li:nth-child(2n-1) {
+		box-shadow: 1px 0 0 #ddd;
+	}
+}
+
+@media screen and (max-width: 41.6em) { 
+	.box-grid li {
+		width: 100%;
+	}
+
+	.box-grid li:nth-child(-n+2) {
+		border-top: 1px solid #ddd;
+	}
+
+	.box-grid li:nth-child(2n-1) {
+		box-shadow: none
+	}
+
+	.box-grid li:first-child {
+		border-top: none;
+	}
+}
+
+@media screen and (max-width: 25em) { 
+	.box-grid {
+		font-size: 80%;
+	}
+
+	.box-grid .box-subtitle {
+		margin-top: 20px;
+	}
 }
 
 /* ==========================================================================
@@ -241,7 +447,7 @@ a:hover {
 }
 
 .credits li:last-child {
-	width: 150px;
+	width: 155px;
 }
 
 .credits li a {
@@ -264,245 +470,4 @@ a:hover {
 .credits .meteoritebi-logo {
 	display: block;
 	margin-top: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Clear floats */
-.box-grid:before, 
-.box-grid:after { 
-	content: " "; 
-	display: table; 
-}
-
-.box-grid:after { 
-	clear: both; 
-}
-
-/* General grid styles */
-.box-grid {
-	list-style: none;
-	padding: 0 0 50px 0;
-	margin: 0;
-}
-
-/* grid item */
-.box-grid li {
-	width: 33%;
-	float: left;
-	height: 420px;
-	text-align: center;
-	border-top: 1px solid #ddd;
-}
-
-/* we are using a combination of borders and box shadows to control the grid lines */
-.box-grid li:nth-child(-n+3){
-	border-top: none;
-}
-
-.box-grid li:nth-child(3n-1),
-.box-grid li:nth-child(3n-2) {
-	box-shadow: 1px 0 0 #ddd;
-}
-
-/* anchor style */
-.box-grid li > a {
-	display: block;
-	height: 100%;
-	color: #ae1817;
-	-webkit-transition: background 0.2s;
-	-moz-transition: background 0.2s;
-	transition: background 0.2s;
-}
-
-/* the icon with pseudo class for icon font */
-.box-icon {
-	padding: 30px 0 0 0;
-	display: block;
-	-webkit-transition: -webkit-transform 0.2s;
-	transition: -moz-transform 0.2s;
-	transition: transform 0.2s;
-}
-
-.box-icon:before {
-	font-family: 'FontAwesome';
-	font-size: 8em;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1.8;
-	-webkit-font-smoothing: antialiased;
-}
-
-/* title element */
-.box-grid .box-title {
-	margin: 20px 0 10px 0;
-	padding: 20px 0 0 0;
-	font-size: 2em;
-	position: relative;
-	-webkit-transition: -webkit-transform 0.2s;
-	-moz-transition: -moz-transform 0.2s;
-	transition: transform 0.2s;
-}
-
-.box-grid .box-title:before {
-	content: '';
-	position: absolute;
-	background: #ae1817;
-	width: 160px;
-	height: 6px;
-	top: 0px;
-	left: 50%;
-	margin: -10px 0 0 -80px;
-	-webkit-transition: margin-top 0.2s; /* top or translate does not seem to work in Firefox */
-	-moz-transition: margin-top 0.2s;
-	transition: margin-top 0.2s;
-}
-
-.box-grid .box-category {
-	text-transform: uppercase;
-	display: inline-block;
-	font-size: 1em;
-	letter-spacing: 1px;
-	color: #fff;
-	-webkit-transform: translateY(10px);
-	-moz-transform: -moz-translateY(10px);
-	-ms-transform: -ms-translateY(10px);
-	transform: translateY(10px);
-	opacity: 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
-	-webkit-transition: transform 0.3s, opacity 0.2s;
-}
-
-.box-grid li:hover .box-category,
-.touch .box-grid li .box-category {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	-ms-transform: translateY(0px);
-	transform: translateY(0px);
-}
-
-/* Hover styles */
-
-.box-grid li > a:hover {
-	background: #ae1817;
-}
-
-.box-grid li > a:hover .box-icon {
-	-webkit-transform: translateY(10px);
-	-moz-transform: translateY(10px);
-	-ms-transform: translateY(10px);
-	transform: translateY(10px);
-}
-
-.box-grid li > a:hover .box-icon:before,
-.box-grid li > a:hover .box-title {
-	color: #fff;
-}
-
-.box-grid li > a:hover .box-title {
-	-webkit-transform: translateY(-30px);
-	-moz-transform: translateY(-30px);
-	-ms-transform: translateY(-30px);
-	transform: translateY(-30px);
-}
-
-.box-grid li > a:hover .box-title:before {
-	background: #fff;
-	margin-top: 80px;
-}
-
-
-@media screen and (max-width: 62.75em) {
-	.box-grid li {
-		width: 50%;
-	}
-
-	/* reset the grid lines */
-	.box-grid li:nth-child(-n+3){
-		border-top: 1px solid #ddd;
-	}
-
-	.box-grid li:nth-child(3n-1),
-	.box-grid li:nth-child(3n-2) {
-		box-shadow: none;
-	}
-
-	.box-grid li:nth-child(-n+2){
-		border-top: none;
-	}
-
-	.box-grid li:nth-child(2n-1) {
-		box-shadow: 1px 0 0 #ddd;
-	}
-}
-
-@media screen and (max-width: 41.6em) { 
-	.box-grid li {
-		width: 100%;
-	}
-
-	.box-grid li:nth-child(-n+2){
-		border-top: 1px solid #ddd;
-	}
-
-	.box-grid li:nth-child(2n-1) {
-		box-shadow: none
-	}
-
-	.box-grid li:first-child {
-		border-top: none;
-	}
-}
-
-@media screen and (max-width: 25em) { 
-	.box-grid {
-		font-size: 80%;
-	}
-
-	.box-grid .box-category {
-		margin-top: 20px;
-	}
 }

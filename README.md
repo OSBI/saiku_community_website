@@ -14,4 +14,4 @@ English is the universal language nowadays, so please don't create or comment on
 
 ## License
 
-MIT License © Meteorite BI
+[Apache License Version 2](https://github.com/OSBI/saiku_community_website/blob/master/LICENSE) © Meteorite BI
