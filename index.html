@@ -5,7 +5,7 @@
 
 		<!-- Meta -->
 		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Saiku Community">
 		<meta name="keywords" content="meteorite-bi, saiku-ui, community, analytics-client, business-intelligence">
@@ -21,28 +21,89 @@
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="image/favicon.ico">
-
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
 		<!-- Google Fonts -->
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/main.css">
-		<script type="text/javascript" src="https://meteoritebi.agilecrm.com/stats/min/agile-min.js"> 
+		<script type="text/javascript" src="https://meteoritebi.agilecrm.com/stats/min/agile-min.js">
 </script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 <script type="text/javascript" >
  _agile.set_account('u83ia08rsg8qs6jhu4gg7sdb03', 'meteoritebi');
  _agile.track_page_view();
  _agile_execute_web_rules();
 </script>
+
 	</head>
 	<body>
+	<script>
+		$(document).ready(function () {
+			$.fn.myFunction = function(){
+ 				$("#dialog").dialog();
+			};
+			$.fn.showTextArea = function(){
+				$("#texta").css('display','inline-block');
+				$("#textb").css('display','inline-block');
+				$("#dollar").css('display','inline-block');
+
+			};
+			$.fn.goButton = function(){
+				var i = (document.getElementById('texta').value);
+				if(i !=null && i>0){
+					var win =
+						window.open('http://sites.fastspring.com/meteoriteconsulting/product/cedownloadcustom?tags=total='+i, '_blank');
+					if(win){
+						//Browser has allowed it to be opened
+						win.focus();
+					}else{
+						//Broswer has blocked it
+						alert('Please allow popups for this site');
+					}
+
+				}
+				else if(i !=null && i == 0){
+					window.location.href="http://community.meteorite.bi?cedownload";
+
+				}
+				else{
+						var glower = $('#texta');
+						glower.addClass('glower');
+					setTimeout(function() {
+						glower.removeClass('glower')
+						;}, 2000);
+
+				}
+
+			}
+		});
+	</script>
+	<div id="dialog" style="display:none;text-align: center" title="CE Download">
+		<p><h2>Saiku Analytics CE.</h2>
+		<h4>It costs money to maintain Saiku, considering sponsoring development.</h4>
+		<a class="myButton" target="_blank" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation10">$10</a>
+		<a class="myButton" target="_blank"
+		   href="http://sites.fastspring.com/meteoriteconsulting/product/cedownload25">$25</a>
+		<a class="myButton" target="_blank"
+		   href="http://sites.fastspring.com/meteoriteconsulting/product/cedownload50">$50</a><br/>
+		<a class="myButton" onclick="$(this).showTextArea();">Other</a><br/><nobr><span id="dollar"
+																								style="display:
+		none">$
+	</span><input type="text" id="texta" style="display: none;margin : 0 auto;"/></nobr><br/>
+		<a class="myButton" style="display: none;" id="textb" onclick="$(this).goButton();"
+		 target="_blank">Download</a>
+		</p>
+	</div>
+
 		<div class="container">
 			<header class="clearfix">
 				<a class="saiku-logo" href="http://community.meteorite.bi">
 					<img src="image/saiku-logo.png" width="200" height="34" alt="Saiku Logo">
 				</a>
-				<h2 class="description">Community</h1>
+				<h1 class="description">Community</h1>
 
 				<nav class="social">
 					<a href="https://twitter.com/SaikuAnalytics" target="_blank" data-info="Twitter"><i class="fa fa-twitter"></i><span>Twitter</span></a>
@@ -57,7 +118,7 @@
 		<div class="main">
 			<ul class="box-grid">
 				<li>
-					<a href="http://community.meteorite.bi?cedownload">
+					<a href="#" onclick="$(this).myFunction();">
 						<span class="box-icon fa fa-download"></span>
 						<h3 class="box-title">Download Saiku CE</h3>
 						<span class="box-subtitle">For Windows/Mac/Linux</span>

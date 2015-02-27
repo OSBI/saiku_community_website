@@ -40,14 +40,14 @@ html {
  * Link: http://nicolasgallagher.com/micro-clearfix-hack/
  */
 
-.clearfix:before, 
-.clearfix:after { 
-	content: " "; 
-	display: table; 
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
 }
 
-.clearfix:after { 
-	clear: both; 
+.clearfix:after {
+	clear: both;
 }
 
 body {
@@ -60,8 +60,8 @@ a {
 	text-decoration: none;
 }
 
-a:hover { 
-	color: #000; 
+a:hover {
+	color: #000;
 }
 
 /* ==========================================================================
@@ -78,8 +78,8 @@ a:hover {
 	padding: 2.875em 1.875em 1.875em;
 }
 
-.container > header .saiku-logo { 
-	display: block; 
+.container > header .saiku-logo {
+	display: block;
 }
 
 .container > header .description {
@@ -109,8 +109,8 @@ a:hover {
 	border-radius: 50%;
 }
 
-.container > header .social a > span { 
-	display: none; 
+.container > header .social a > span {
+	display: none;
 }
 
 .container > header .social a:hover:before {
@@ -124,8 +124,8 @@ a:hover {
 	pointer-events: none;
 }
 
-.container > header .social a:hover { 
-	background-color: #ae1817; 
+.container > header .social a:hover {
+	background-color: #ae1817;
 }
 
 .container > header .social a .fa {
@@ -140,8 +140,8 @@ a:hover {
 	text-indent: 0;
 }
 
-.container > header .social a:hover .fa { 
-	color: #fff; 
+.container > header .social a:hover .fa {
+	color: #fff;
 }
 
 /* 1.2. CONTAINER MEDIA QUERIES
@@ -158,8 +158,8 @@ a:hover {
 		text-align: center;
 	}
 
-	.container > header .social { 
-		margin: 30px auto; 
+	.container > header .social {
+		margin: 30px auto;
 	}
 }
 
@@ -179,14 +179,14 @@ a:hover {
 /* 2.1. GENERAL GRID STYLES
    ========================================================================== */
 
-.box-grid:before, 
-.box-grid:after { 
-	content: " "; 
-	display: table; 
+.box-grid:before,
+.box-grid:after {
+	content: " ";
+	display: table;
 }
 
-.box-grid:after { 
-	clear: both; 
+.box-grid:after {
+	clear: both;
 }
 
 .box-grid {
@@ -206,12 +206,12 @@ a:hover {
 }
 
 /*
- * we are using a combination of borders and 
+ * we are using a combination of borders and
  * box shadows to control the grid lines
  */
 
-.box-grid li:nth-child(-n+3) { 
-	border-top: none; 
+.box-grid li:nth-child(-n+3) {
+	border-top: none;
 }
 
 .box-grid li:nth-child(3n-1),
@@ -289,7 +289,7 @@ a:hover {
 	   -moz-transform: -moz-translateY(10px);
 	    -ms-transform: -ms-translateY(10px);
 	        transform: translateY(10px);
-	
+
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
 	   -moz-transition: -moz-transform 0.3s, opacity 0.2s;
 	-webkit-transition: transform 0.3s, opacity 0.2s;
@@ -362,7 +362,7 @@ a:hover {
 	}
 }
 
-@media screen and (max-width: 41.6em) { 
+@media screen and (max-width: 41.6em) {
 	.box-grid li {
 		width: 100%;
 	}
@@ -380,7 +380,7 @@ a:hover {
 	}
 }
 
-@media screen and (max-width: 25em) { 
+@media screen and (max-width: 25em) {
 	.box-grid {
 		font-size: 80%;
 	}
@@ -470,4 +470,50 @@ a:hover {
 .credits .meteoritebi-logo {
 	display: block;
 	margin-top: 10px;
+}
+
+.myButton {
+	background-color:#ae1817;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:0px solid #ae1817;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff !important;
+	font-family:arial;
+	font-size:17px;
+	/*padding:16px 31px;*/
+	padding:5px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ae1817;
+	margin:3px;
+	outline: 0;
+	text-color:white;
+}
+.myButton:hover {
+	background-color:#ae1817;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+input[type=text], textarea {
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid #DDDDDD;
+	width:50%;
+}
+
+.glower {
+	box-shadow: 0 0 25px rgba(81, 203, 238, 1);
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid rgba(81, 203, 238, 1);
 }
