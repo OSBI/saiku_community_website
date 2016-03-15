@@ -32,6 +32,9 @@
 </script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+		<script>
+		
+		</script>
 <script type="text/javascript" >
  _agile.set_account('u83ia08rsg8qs6jhu4gg7sdb03', 'meteoritebi');
  _agile.track_page_view();
@@ -42,6 +45,19 @@
 	<body>
 	<script>
 		$(document).ready(function () {
+			var clicked=true;
+$(".myButton2").on('click', function(){
+    if(clicked)
+    {
+        clicked=false;
+        $(".two").css({"top": 0});
+    }
+    else
+    {
+        clicked=true;
+        $(".two").css({"top": "-500px"});
+    }
+});
 			$.fn.myFunction = function(){
  				$("#dialog").dialog();
 			};
@@ -81,6 +97,56 @@
 			}
 		});
 	</script>
+	 <div class="two">
+	 	<div class="">
+	 		<ul id="navlist">
+				<li style="margin-left:25%;width:25%;float:left">
+				<h3>Sponsor Saiku Analytics!</h3>
+				<p>Building, testing and deploying Saiku Community Edition costs both time and money. </p>
+				<p>If you use Saiku CE in your business, please consider donating to the project. The servers we run, the software we build and release under the Apache License, we do so because we love the open source model and we believe in giving back as well as consuming other developers code.</p>
+				<p>without donations to the project it makes releasing Saiku under an open source license very difficult because we have bills to pay and families to feed!</p></li>
+				<li style="width:25%;float:left">
+					<div style="background-color:#f5f5f5;border-radius: 15px; padding:10px;text-align: center;">
+					<h3>Donate</h3>
+					<h4>Credit Card</h4>
+					<a class="myButton" target="_blank" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation10">$10</a>
+		<a class="myButton" target="_blank"
+		   href="http://sites.fastspring.com/meteoriteconsulting/product/cedownload25">$25</a>
+		<a class="myButton" target="_blank"
+		   href="http://sites.fastspring.com/meteoriteconsulting/product/cedownload50">$50</a><br/><br/>
+		<a class="myButton" onclick="$(this).showTextArea();">Other</a><br/>
+		<span id="dollar" style="display:none">$</span><input type="text" id="texta" style="display: none;margin : 0 auto;"/></nobr><br/>
+		<a class="myButton" style="display: none;" id="textb" onclick="$(this).goButton();"
+		 target="_blank">Pay!</a>
+		 
+		</p>
+		<hr/>
+		<p>
+		<h4>Paypal</h4>
+		<form style="width:50%; margin:0 auto;" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="EYAG7FLL3AEL6">
+<table>
+<tr><td><input type="hidden" name="on0" value="Sponsor Amount">Sponsor Amount</td></tr><tr><td><select name="os0">
+	<option value="Thanks a lot!">Thanks a lot! $10.00 USD</option>
+	<option value="We love you!">We love you! $25.00 USD</option>
+	<option value="Amazing!">Amazing! $50.00 USD</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD">
+<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+</p>
+<hr/>
+		<p><a class="myButton" href="http://community.meteorite.bi?cedownload">Download without sponsoring</a>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+<a href="#" id="closebutton" class=" myButton2 myButton">Close</a>
+	 </div>
 	<div id="dialog" style="display:none;text-align: center" title="CE Download">
 		<p><h2>Saiku Analytics CE.</h2>
 		<h4>It costs money to maintain Saiku, consider sponsoring development.</h4>
@@ -118,19 +184,13 @@
 		<div class="main">
 			<ul class="box-grid">
 				<li>
-					<a href="#" onclick="$(this).myFunction();">
+					<a href="#" class="myButton2" onclick="">
 						<span class="box-icon fa fa-download"></span>
 						<h3 class="box-title">Download Saiku CE</h3>
 						<span class="box-subtitle">For Windows/Mac/Linux</span>
 					</a>
 				</li>
-				<li>
-					<a href="http://build.saikuanalytics.com" target="_blank">
-						<span class="box-icon fa fa-cogs"></span>
-						<h3 class="box-title">Build Server</h3>
-						<span class="box-subtitle">build.saikuanalytics.com</span>
-					</a>
-				</li>
+			
 				<li>
 					<a href="https://github.com/osbi" target="_blank">
 						<span class="box-icon fa fa-github"></span>
