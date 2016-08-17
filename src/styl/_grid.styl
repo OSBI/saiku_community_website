@@ -14,41 +14,32 @@
  *   limitations under the License.
  */
 
-/*! =========================================================================
-   0. GLOBAL
+ /*! =========================================================================
+   2. BOX GRID
    ========================================================================= */
 
-*,
-*:before,
-*:after
-  box-sizing border-box
+/*! 2.1. GENERAL GRID STYLES
+    ========================================================================== */
 
-body,
-html
-  margin 0
-  padding 0
-  font-size 100%
-
-/*!
- * Clearfix hack by Nicolas Gallagher
- * Link: http://nicolasgallagher.com/micro-clearfix-hack/
- */
-
-.clearfix:before,
-.clearfix:after
+.box-grid:before,
+.box-grid:after
   display table
   content " "
 
-.clearfix
+.box-grid
+  margin 0
+  padding 0 0 50px 0
+  list-style none
   &:after
     clear both
-
-body
-  font-family "Lato", Calibri, Arial, sans-serif
-  color #ae1817
-
-a
-  color #f0f0f0
-  text-decoration none
-  &:hover
-    color #000
+  li
+    float left
+    width 33%
+    height 420px
+    border-top 1px solid #ddd
+    text-align center
+    &:nth-child(-n+3)
+      border-top none
+    &:nth-child(3n-1),
+    &:nth-child(3n-2)
+      box-shadow 1px 0 0 #ddd

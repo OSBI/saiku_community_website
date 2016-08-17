@@ -33,9 +33,8 @@
     "gulp-imagemin": "^3.0.2",
     "gulp-jade": "^1.1.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-stylus": "^2.5.0",
+    "gulp-postcss": "^6.1.1",
     "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.7",
-    "poststylus": "^0.2.3"
+    "gulp-util": "^3.0.7"
   }
 }

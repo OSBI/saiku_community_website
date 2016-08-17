@@ -5,11 +5,10 @@ module.exports = {
     templates: './src/templates/**/*.jade',
     slides: './src/slides/*.md',
     js: './src/js/**/*.js',
-    styl: './src/styl/**/*.styl',
     img: './src/img/**/*',
     files: {
       jade: './src/templates/index.jade',
-      styl: './src/styl/main.styl'
+      css: './src/styl/style.css'
     }
   },
 
