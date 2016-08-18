@@ -24,153 +24,19 @@
 		<link rel="icon" href="images/favicon-48.png" sizes="48x48" type="image/png">
 		<link rel="icon" href="images/favicon-62.png" sizes="62x62" type="image/png">
 		<link rel="icon" href="images/favicon-192.png" sizes="192x192" type="image/png">
-		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+
 		<!-- Google Fonts -->
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/main.css">
-		<script type="text/javascript" src="https://meteoritebi.agilecrm.com/stats/min/agile-min.js">
-</script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
-		<script>
-
-		</script>
-<script type="text/javascript" >
- _agile.set_account('u83ia08rsg8qs6jhu4gg7sdb03', 'meteoritebi');
- _agile.track_page_view();
- _agile_execute_web_rules();
-</script>
-
 	</head>
 	<body>
-	<script>
-		$(document).ready(function () {
-			var clicked=true;
-$(".myButton2").on('click', function(){
-    if(clicked)
-    {
-        clicked=false;
-        $(".two").css({"top": 0});
-    }
-    else
-    {
-        clicked=true;
-        $(".two").css({"top": "-500px"});
-    }
-});
-			$.fn.myFunction = function(){
- 				$("#dialog").dialog();
-			};
-			$.fn.showTextArea = function(){
-				$("#texta").css('display','inline-block');
-				$("#textb").css('display','inline-block');
-				$("#dollar").css('display','inline-block');
-
-			};
-			$.fn.goButton = function(){
-				var i = (document.getElementById('texta').value);
-				if(i !=null && i>0){
-					var win =
-						window.open('http://sites.fastspring.com/meteoriteconsulting/product/cedownloadcustom?tags=total='+i*100, '_blank');
-					if(win){
-						//Browser has allowed it to be opened
-						win.focus();
-					}else{
-						//Broswer has blocked it
-						alert('Please allow popups for this site');
-					}
-
-				}
-				else if(i !=null && i == 0){
-					window.location.href="http://meteorite.bi/downloads/saiku-latest.zip";
-
-				}
-				else{
-						var glower = $('#texta');
-						glower.addClass('glower');
-					setTimeout(function() {
-						glower.removeClass('glower')
-						;}, 2000);
-
-				}
-
-			}
-		});
-	</script>
-	 <div class="two">
-	 	<div class="">
-	 		<ul id="navlist">
-				<li style="margin-left:25%;width:25%;float:left">
-				<h3>Sponsor Saiku Analytics!</h3>
-				<p>Building, testing and deploying Saiku Community Edition costs both time and money. </p>
-				<p>If you use Saiku CE in your business, please consider donating to the project. The servers we run, the software we build and release under the Apache License, we do so because we love the open source model and we believe in giving back as well as consuming other developers code.</p>
-				<p>Without donations to the project, it makes releasing Saiku under an open source license very difficult because we have bills to pay and families to feed! So please consider funding open source development and helping Saiku prosper and grow further.</p></li>
-				<li style="width:25%;float:left">
-					<div style="background-color:#f5f5f5;border-radius: 15px; padding:10px;text-align: center;">
-					<h3>Donate</h3>
-					<h4>Credit Card</h4>
-					<a class="myButton" target="_blank" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation10">$10</a>
-		<a class="myButton" target="_blank"
-		   href="http://sites.fastspring.com/meteoriteconsulting/product/cedownload25">$25</a>
-		<a class="myButton" target="_blank"
-		   href="http://sites.fastspring.com/meteoriteconsulting/product/cedownload50">$50</a><br/><br/>
-		<a class="myButton" onclick="$(this).showTextArea();">Other</a><br/>
-		<span id="dollar" style="display:none">$</span><input type="text" id="texta" style="display: none;margin : 0 auto;"/></nobr><br/>
-		<a class="myButton" style="display: none;" id="textb" onclick="$(this).goButton();"
-		 target="_blank">Pay!</a>
-
-		</p>
-		<hr/>
-		<p>
-		<h4>Paypal</h4>
-		<form style="width:50%; margin:0 auto;" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="EYAG7FLL3AEL6">
-<table>
-<tr><td><input type="hidden" name="on0" value="Sponsor Amount">Sponsor Amount</td></tr><tr><td><select name="os0">
-	<option value="Thanks a lot!">Thanks a lot! $10.00 USD</option>
-	<option value="We love you!">We love you! $25.00 USD</option>
-	<option value="Amazing!">Amazing! $50.00 USD</option>
-</select> </td></tr>
-</table>
-<input type="hidden" name="currency_code" value="USD">
-<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-</form>
-</p>
-<hr/>
-		<p><a class="myButton" href="http://meteorite.bi/downloads/saiku-latest.zip">Download without sponsoring</a>
-					</div>
-				</li>
-			</ul>
-
-		</div>
-<a href="#" id="closebutton" class=" myButton2 myButton">Close</a>
-	 </div>
-	<div id="dialog" style="display:none;text-align: center" title="CE Download">
-		<p><h2>Saiku Analytics CE.</h2>
-		<h4>It costs money to maintain Saiku, consider sponsoring development.</h4>
-		<a class="myButton" target="_blank" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation10">$10</a>
-		<a class="myButton" target="_blank"
-		   href="http://sites.fastspring.com/meteoriteconsulting/product/cedownload25">$25</a>
-		<a class="myButton" target="_blank"
-		   href="http://sites.fastspring.com/meteoriteconsulting/product/cedownload50">$50</a><br/>
-		<a class="myButton" onclick="$(this).showTextArea();">Other</a><br/><nobr><span id="dollar"
-																								style="display:
-		none">$
-	</span><input type="text" id="texta" style="display: none;margin : 0 auto;"/></nobr><br/>
-		<a class="myButton" style="display: none;" id="textb" onclick="$(this).goButton();"
-		 target="_blank">Download</a>
-		</p>
-	</div>
-
 		<div class="container">
 			<header class="clearfix">
 				<a class="saiku-logo" href="http://community.meteorite.bi">
-					<img src="image/saiku-logo.png" width="200" height="34" alt="Saiku Logo">
+					<img src="images/saiku-logo.png" width="200" height="34" alt="Saiku Logo">
 				</a>
 				<h1 class="description">Community</h1>
 
@@ -187,13 +53,12 @@ $(".myButton2").on('click', function(){
 		<div class="main">
 			<ul class="box-grid">
 				<li>
-					<a href="#" class="myButton2" onclick="">
+					<a href="#">
 						<span class="box-icon fa fa-download"></span>
 						<h3 class="box-title">Download Saiku CE</h3>
 						<span class="box-subtitle">For Windows/Mac/Linux</span>
 					</a>
 				</li>
-
 				<li>
 					<a href="https://github.com/osbi" target="_blank">
 						<span class="box-icon fa fa-github"></span>
@@ -208,13 +73,6 @@ $(".myButton2").on('click', function(){
 						<span class="box-subtitle">community.meteorite.bi/docs/</span>
 					</a>
 				</li>
-			<!--	<li>
-					<a href="http://forums.meteorite.bi" target="_blank">
-						<span class="box-icon fa fa-bullhorn"></span>
-						<h3 class="box-title">Forums</h3>
-						<span class="box-subtitle">forums.meteorite.bi</span>
-					</a>
-				</li>-->
 				<li>
 					<a href="https://groups.google.com/a/saiku.meteorite.bi/forum/#!forum/dev" target="_blank">
 						<span class="box-icon fa fa-bolt"></span>
@@ -296,7 +154,7 @@ $(".myButton2").on('click', function(){
 			</ul>
 			<p>Brought to you by
 				<a class="meteoritebi-logo" href="http://meteorite.bi" target="_blank">
-					<img src="image/meteoritebi-logo.jpg" width="100" height="77" alt="Meteorite BI Logo">
+					<img src="images/meteoritebi-logo.jpg" width="100" height="77" alt="Meteorite BI Logo">
 				</a>
 			</p>
 		</footer>
