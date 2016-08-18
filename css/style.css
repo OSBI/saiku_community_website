@@ -8,9 +8,9 @@
  *
  *	0. GLOBAL
  *	1. DEFAULT
- *		- 1.1. CONTAINER
- *		- 1.2. CONTAINER MEDIA QUERIES
- *		- 1.3. MAIN
+ *		- 1.1. HEADER
+ *		- 1.2. HEADER MEDIA QUERIES
+ *		- 1.3. CONTAINER
  *	2. BOX GRID
  *		- 2.1. GENERAL GRID STYLES
  *		- 2.2. GRID MEDIA QUERIES
@@ -70,21 +70,21 @@ a:hover {
    1. DEFAULT
    ========================================================================== */
 
-/* 1.1. CONTAINER
+/* 1.1. HEADER
    ========================================================================== */
 
-.container > header {
+.header {
   width: 90%;
   max-width: 69em;
   margin: 0 auto;
   padding: 2.875em 1.875em 1.875em;
 }
 
-.container > header .saiku-logo {
+.header .saiku-logo {
   display: block;
 }
 
-.container > header .description {
+.header .description {
   float: left;
   margin: 0 0 .6em 0;
   font-size: 1.500em;
@@ -92,14 +92,14 @@ a:hover {
   line-height: 1.3;
 }
 
-.container > header .social {
+.header .social {
   position: relative;
   top: -15px;
   float: right;
   text-align: center;
 }
 
-.container > header .social a {
+.header .social a {
   position: relative;
   display: inline-block;
   width: 2.5em;
@@ -111,11 +111,11 @@ a:hover {
   text-align: left;
 }
 
-.container > header .social a > span {
+.header .social a > span {
   display: none;
 }
 
-.container > header .social a:hover:before {
+.header .social a:hover:before {
   position: absolute;
   top: 120%;
   right: 0;
@@ -126,11 +126,11 @@ a:hover {
   pointer-events: none;
 }
 
-.container > header .social a:hover {
+.header .social a:hover {
   background-color: #ae1817;
 }
 
-.container > header .social a .fa {
+.header .social a .fa {
   position: absolute;
   top: 0;
   left: 0;
@@ -142,33 +142,33 @@ a:hover {
   text-indent: 0;
 }
 
-.container > header .social a:hover .fa {
+.header .social a:hover .fa {
   color: #fff;
 }
 
-/* 1.2. CONTAINER MEDIA QUERIES
+/* 1.2. HEADER MEDIA QUERIES
    ========================================================================== */
 
 @media screen and (max-width: 55em) {
-  .container > header .description,
-  .container > header .social {
+  .header .description,
+  .header .social {
     float: none;
   }
 
-  .container > header > .saiku-logo,
-  .container > header .description {
+  .header > .saiku-logo,
+  .header .description {
     text-align: center;
   }
 
-  .container > header .social {
+  .header .social {
     margin: 30px auto;
   }
 }
 
-/* 1.3. MAIN
+/* 1.3. CONTAINER
    ========================================================================== */
 
-.main {
+.container {
   width: 90%;
   margin: 0 auto;
   padding: 1em;
