@@ -58,10 +58,23 @@
 		</header>
 		<!-- /.header -->
 
+	  <div class="overlay overlay-slidedown">
+	    <button type="button" class="overlay-close">Close</button>
+	    <nav>
+	      <ul>
+	        <li><a href="#">Home</a></li>
+	        <li><a href="#">About</a></li>
+	        <li><a href="#">Work</a></li>
+	        <li><a href="#">Clients</a></li>
+	        <li><a href="#">Contact</a></li>
+	      </ul>
+	    </nav>
+	  </div>
+
 		<main class="container">
 			<ul class="box-grid">
 				<li>
-					<a href="#">
+					<a id="trigger-overlay" href="javascript:void(0);">
 						<span class="box-icon fa fa-download"></span>
 						<h3 class="box-title">Download Saiku CE</h3>
 						<span class="box-subtitle">For Windows/Mac/Linux</span>
@@ -170,5 +183,6 @@
 
 		<!-- JS -->
 		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
