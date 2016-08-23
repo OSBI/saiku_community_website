@@ -131,54 +131,82 @@
 
 	  <div class="overlay overlay-slidedown">
 	    <button type="button" class="overlay-close">Close</button>
+
+			<!-- Show on mobile/tablet screen -->
+			<div class="overlay-notification" style="display: none;">
+				<h3>Sponsor Saiku Analytics!</h3>
+				<p>If you use Saiku CE in your business, please consider donating to the project. The servers we run, the software we build and release under the Apache License, we do so because we love the open source model and we believe in giving back as well as consuming other developers code.</p>
+			</div>
+			<!-- /.overlay-notification -->
+
 	    <div class="overlay-container overlay-center">
-				<div class="donate-text">
+				<div class="overlay-donate-text">
 					<h3>Sponsor Saiku Analytics!</h3>
 					<p>Building, testing and deploying Saiku Community Edition costs both time and money.</p>
 					<p>If you use Saiku CE in your business, please consider donating to the project. The servers we run, the software we build and release under the Apache License, we do so because we love the open source model and we believe in giving back as well as consuming other developers code.</p>
 					<p>Without donations to the project, it makes releasing Saiku under an open source license very difficult because we have bills to pay and families to feed! So please consider funding open source development and helping Saiku prosper and grow further.</p>
 				</div>
-				<div class="donate-box">
-					<h3>Donate</h3>
-					<h4>Credit Card</h4>
+				<!-- /.overlay-donate-text -->
 
-					<div class="form-group">
-						<button>$10</button>
-						<button>$25</button>
-						<button>$50</button>
-					</div>
-					<div class="form-group">
-						<button>Other</button>
-					</div>
+				<div class="overlay-donate-box">
+					<form>
+						<h3>Donate</h3>
+						<h4>Credit Card</h4>
 
-					<div class="box-other-value">
 						<div class="form-group">
-							$ <input type="text">
+							<a class="btn-donate" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation10" target="_blank">
+								<span>$10</span>
+							</a>
+							<a class="btn-donate" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation25" target="_blank">
+								<span>$25</span>
+							</a>
+							<a class="btn-donate" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation50" target="_blank">
+								<span>$50</span>
+							</a>
 						</div>
+
 						<div class="form-group">
-							<button>Pay!</button>
+							<a class="btn-donate" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation10" target="_blank">
+								<span>Other</span>
+							</a>
 						</div>
-					</div>
 
-					<h4>Paypal</h4>
-					<p>Sponsor Amount</p>
+						<div class="other-value">
+							<div class="form-group">
+								<label for="">$</label>
+								<input type="text">
+							</div>
+							<div class="form-group">
+								<a class="btn-donate" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation10" target="_blank">
+									<span>Pay!</span>
+								</a>
+							</div>
+						</div>
 
-					<div class="form-group">
-						<select name="">
-							<option value="Thanks a lot!">Thanks a lot! $10.00 USD</option>
-							<option value="We love you!">We love you! $25.00 USD</option>
-							<option value="Amazing!">Amazing! $50.00 USD</option>
-						</select>
-					</div>
+						<hr>
 
-					<div class="form-group">
-						<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
-					</div>
+						<h4>Paypal</h4>
 
-					<div class="form-group">
-						<button>Download without sponsoring</button>
-					</div>
+						<div class="form-group overlay-sponsor">
+							<label>Sponsor Amount</label>
+		          <select name="">
+		            <option value="Thanks a lot!">Thanks a lot! $10.00 USD</option>
+		            <option value="We love you!">We love you! $25.00 USD</option>
+		            <option value="Amazing!">Amazing! $50.00 USD</option>
+		          </select>
+		          <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+	          </div>
+
+	          <hr>
+
+						<div class="form-group">
+							<a class="btn-donate btn-lg" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation10" target="_blank">
+								<span>Download without sponsoring</span>
+							</a>
+						</div>
+					</form>
 				</div>
+				<!-- /.overlay-donate-box -->
 	    </div>
 	  </div>
 	  <!-- /.overlay -->
@@ -226,5 +254,6 @@
 		<!-- JS -->
 		<script src="js/classie.js"></script>
 		<script src="js/main.js"></script>
+		<script src="http://localhost:35729/livereload.js"></script>
 	</body>
 </html>
