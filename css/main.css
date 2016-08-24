@@ -215,12 +215,19 @@ a:hover {
   color: transparent;
   border: none;
   outline: none;
-  background: url(../images/cross.png) no-repeat center center;
+  background: url(../images/cross.svg) no-repeat center center;
   cursor: pointer;
   text-indent: 200%;
 }
 
 /* Overlay content */
+
+.overlay-notification {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
 
 .overlay-container {
   display: flex;
@@ -320,6 +327,12 @@ a:hover {
 
 .overlay-donate-box hr {
   width: 90%;
+  height: 1px;
+  border: 0;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image:    -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image:     -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image:      -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
 /* Effects */
@@ -352,6 +365,188 @@ a:hover {
     min-height: 34px;
   }
 }
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   3. RESPONSIVE
+   ========================================================================== */
+
+/* 3.1 LARGE DEVICES, WIDE SCREENS
+   ========================================================================== */
+
+@media only screen and (max-width: 1200px) {
+/*  .overlay {
+    background: yellow;
+  }*/
+}
+
+/* 3.2 MEDIUM DEVICES, DESKTOPS
+   ========================================================================== */
+
+@media only screen and (max-width: 992px) {
+/*  .overlay {
+    background: cyan;
+  }*/
+
+  /* Overlay content */
+
+  .overlay-notification {
+    display: block;
+    left: 15%;
+    right: 15%;
+  }
+
+  .overlay-center {
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+
+  .overlay-donate-text {
+    display: none;
+  }
+}
+
+/* 3.3 SMALL DEVICES, TABLETS LANDSCAPE
+   ========================================================================== */
+
+@media only screen and (max-width: 768px) {
+/*  .overlay {
+    background: red;
+  }*/
+
+  /* Overlay content */
+
+  .overlay-notification {
+    display: block;
+    left: 15%;
+    right: 15%;
+  }
+
+  .overlay-center {
+    /*top: 45%;*/
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+
+  .overlay-donate-text {
+    display: none;
+  }
+}
+
+/* 3.4 SMALL DEVICES, TABLETS PORTRAIT
+   ========================================================================== */
+
+@media only screen and (max-width: 600px) {
+/*  .overlay {
+    background: pink;
+  }*/
+
+  /* Overlay closing cross */
+
+  .overlay .overlay-close {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Overlay content */
+
+  .overlay-notification {
+    display: block;
+  }
+
+  .overlay-center {
+    top: 45%;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+
+  .overlay-donate-text {
+    display: none;
+  }
+}
+
+/* 3.5 EXTRA SMALL DEVICES, PHONES
+   ========================================================================== */
+
+@media only screen and (max-width: 480px) {
+/*  .overlay {
+    background: blue;
+  }*/
+
+  /* Overlay closing cross */
+
+  .overlay .overlay-close {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Overlay content */
+
+  .overlay-notification {
+    display: block;
+  }
+
+  .overlay-center {
+    top: 45%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .overlay-donate-text {
+    display: none;
+  }
+}
+
+/* 3.6 CUSTOM, IPHONE RETINA
+   ========================================================================== */
+
+@media only screen and (max-width: 360px) {
+/*  .overlay {
+    background: green;
+  }*/
+
+  /* Overlay closing cross */
+
+  .overlay .overlay-close {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Overlay content */
+
+  .overlay-notification {
+    display: block;
+  }
+
+  .overlay-center {
+    top: 45%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .overlay-donate-text {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ==========================================================================
    2. BOX GRID
