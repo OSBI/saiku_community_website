@@ -79,6 +79,14 @@ a:hover {
   color: #000;
 }
 
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
 /* ==========================================================================
    1. DEFAULT
    ========================================================================== */
@@ -306,11 +314,11 @@ a:hover {
   width: 17em;
 }
 
-.overlay-donate-box .other-value {
-  /*display: none;*/
-}
+/*.overlay-donate-box .box-other-value {
+  display: none;
+}*/
 
-.overlay-donate-box .other-value label {
+.overlay-donate-box .box-other-value label {
   margin: 5px 3px 3px 0;
 }
 

@@ -15,23 +15,29 @@
  */
 
 (function() {
-  var triggerBtn = document.querySelector('a#trigger-overlay');
+  var btnTrigger = document.querySelector('a#trigger-overlay');
   var overlay = document.querySelector('div.overlay');
-  var closeBtn = overlay.querySelector('button.overlay-close');
+  var btnClose = overlay.querySelector('button.overlay-close');
+  var btnOtherValue = document.querySelector('a#btn-other-value');
+  var inputOtherValue = document.querySelector('input#other-value');
+  var boxOtherValue = document.querySelector('div.box-other-value');
   var transEndEventNames = {
-      WebkitTransition : 'webkitTransitionEnd',
-      MozTransition    : 'transitionend',
-      OTransition      : 'oTransitionEnd',
-      msTransition     : 'MSTransitionEnd',
-      transition       : 'transitionend'
-    };
+    WebkitTransition : 'webkitTransitionEnd',
+    MozTransition    : 'transitionend',
+    OTransition      : 'oTransitionEnd',
+    msTransition     : 'MSTransitionEnd',
+    transition       : 'transitionend'
+  };
   var transEndEventName = transEndEventNames[Modernizr.prefixed('transition')];
   var support = { transitions : Modernizr.csstransitions };
 
-  function toggleOverlay() {
+  function toggleOverlay(isEscape) {
     if (classie.has(overlay, 'open')) {
       classie.remove(overlay, 'open');
       classie.add(overlay, 'close');
+      classie.remove(boxOtherValue, 'show');
+      classie.add(boxOtherValue, 'hide');
+      inputOtherValue.value = '';
 
       var onEndTransitionFn = function(event) {
         if (support.transitions) {
@@ -56,6 +62,35 @@
     }
   }
 
-  triggerBtn.addEventListener('click', toggleOverlay);
-  closeBtn.addEventListener('click', toggleOverlay);
+  function toggleBtnOtherValue() {
+    if (classie.has(boxOtherValue, 'hide')) {
+      classie.remove(boxOtherValue, 'hide');
+      classie.add(boxOtherValue, 'show');
+    }
+    else {
+      classie.remove(boxOtherValue, 'show');
+      classie.add(boxOtherValue, 'hide');
+    }
+  }
+
+  // Capturing the `ESC` key and close overlay
+  document.onkeydown = function(event) {
+    var isEscape = false;
+    event = event || window.event;
+
+    if ('key' in event) {
+      isEscape = event.key === 'Escape';
+    }
+    else {
+      isEscape = event.keyCode === 27;
+    }
+
+    if (isEscape && classie.has(overlay, 'open')) {
+      toggleOverlay();
+    }
+  };
+
+  btnTrigger.addEventListener('click', toggleOverlay);
+  btnClose.addEventListener('click', toggleOverlay);
+  btnOtherValue.addEventListener('click', toggleBtnOtherValue);
 })();
