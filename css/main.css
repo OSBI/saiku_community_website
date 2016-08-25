@@ -231,9 +231,9 @@ a:hover {
 /* Overlay content */
 
 .overlay-notification {
-  display: none;
   position: absolute;
   bottom: 0;
+  display: none;
   text-align: center;
 }
 
@@ -314,10 +314,6 @@ a:hover {
   width: 17em;
 }
 
-/*.overlay-donate-box .box-other-value {
-  display: none;
-}*/
-
 .overlay-donate-box .box-other-value label {
   margin: 5px 3px 3px 0;
 }
@@ -374,40 +370,20 @@ a:hover {
   }
 }
 
-
-
-
-
-
-
-
-/* ==========================================================================
-   3. RESPONSIVE
-   ========================================================================== */
-
-/* 3.1 LARGE DEVICES, WIDE SCREENS
-   ========================================================================== */
+/* large devices, wide screens */
 
 @media only screen and (max-width: 1200px) {
-/*  .overlay {
-    background: yellow;
-  }*/
 }
 
-/* 3.2 MEDIUM DEVICES, DESKTOPS
-   ========================================================================== */
+/* medium devices, desktops */
 
 @media only screen and (max-width: 992px) {
-/*  .overlay {
-    background: cyan;
-  }*/
-
   /* Overlay content */
 
   .overlay-notification {
-    display: block;
-    left: 15%;
     right: 15%;
+    left: 15%;
+    display: block;
   }
 
   .overlay-center {
@@ -420,24 +396,18 @@ a:hover {
   }
 }
 
-/* 3.3 SMALL DEVICES, TABLETS LANDSCAPE
-   ========================================================================== */
+/* small devices, tablets landscape */
 
 @media only screen and (max-width: 768px) {
-/*  .overlay {
-    background: red;
-  }*/
-
   /* Overlay content */
 
   .overlay-notification {
-    display: block;
-    left: 15%;
     right: 15%;
+    left: 15%;
+    display: block;
   }
 
   .overlay-center {
-    /*top: 45%;*/
     margin-right: 25%;
     margin-left: 25%;
   }
@@ -447,14 +417,9 @@ a:hover {
   }
 }
 
-/* 3.4 SMALL DEVICES, TABLETS PORTRAIT
-   ========================================================================== */
+/* small devices, tablets portrait */
 
 @media only screen and (max-width: 600px) {
-/*  .overlay {
-    background: pink;
-  }*/
-
   /* Overlay closing cross */
 
   .overlay .overlay-close {
@@ -479,14 +444,9 @@ a:hover {
   }
 }
 
-/* 3.5 EXTRA SMALL DEVICES, PHONES
-   ========================================================================== */
+/* extra small devices, phones */
 
 @media only screen and (max-width: 480px) {
-/*  .overlay {
-    background: blue;
-  }*/
-
   /* Overlay closing cross */
 
   .overlay .overlay-close {
@@ -511,14 +471,9 @@ a:hover {
   }
 }
 
-/* 3.6 CUSTOM, IPHONE RETINA
-   ========================================================================== */
+/* custom, iphone retina */
 
 @media only screen and (max-width: 360px) {
-/*  .overlay {
-    background: green;
-  }*/
-
   /* Overlay closing cross */
 
   .overlay .overlay-close {
@@ -542,19 +497,6 @@ a:hover {
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==========================================================================
    2. BOX GRID

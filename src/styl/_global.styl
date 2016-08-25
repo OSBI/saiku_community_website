@@ -20,14 +20,16 @@
 
 *,
 *:before,
-*:after
-  box-sizing border-box
+*:after {
+  box-sizing: border-box;
+}
 
 body,
-html
-  margin 0
-  padding 0
-  font-size 100%
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
 
 /*!
  * Clearfix hack by Nicolas Gallagher
@@ -35,20 +37,33 @@ html
  */
 
 .clearfix:before,
-.clearfix:after
-  display table
-  content " "
+.clearfix:after {
+  display: table;
+  content: " ";
+}
 
-.clearfix
-  &:after
-    clear both
+.clearfix:after {
+  clear: both;
+}
 
-body
-  font-family "Lato", Calibri, Arial, sans-serif
-  color #ae1817
+body {
+  font-family: "Lato", Calibri, Arial, sans-serif;
+  color: #ae1817;
+}
 
-a
-  color #f0f0f0
-  text-decoration none
-  &:hover
-    color #000
+a {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}

@@ -22,24 +22,212 @@
     ========================================================================== */
 
 .box-grid:before,
-.box-grid:after
-  display table
-  content " "
+.box-grid:after {
+  display: table;
+  content: " ";
+}
 
-.box-grid
-  margin 0
-  padding 0 0 50px 0
-  list-style none
-  &:after
-    clear both
-  li
-    float left
-    width 33%
-    height 420px
-    border-top 1px solid #ddd
-    text-align center
-    &:nth-child(-n+3)
-      border-top none
-    &:nth-child(3n-1),
-    &:nth-child(3n-2)
-      box-shadow 1px 0 0 #ddd
+.box-grid:after {
+  clear: both;
+}
+
+.box-grid {
+  margin: 0;
+  padding: 0 0 50px 0;
+  list-style: none;
+}
+
+/* grid item */
+
+.box-grid li {
+  float: left;
+  width: 33%;
+  height: 420px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+/*
+ * we are using a combination of borders and
+ * box shadows to control the grid lines
+ */
+
+.box-grid li:nth-child(-n+3) {
+  border-top: none;
+}
+
+.box-grid li:nth-child(3n-1),
+.box-grid li:nth-child(3n-2) {
+  box-shadow: 1px 0 0 #ddd;
+}
+
+/* anchor style */
+
+.box-grid li > a {
+  display: block;
+  height: 100%;
+  color: #ae1817;
+  -webkit-transition: background .2s;
+     -moz-transition: background .2s;
+          transition: background .2s;
+}
+
+/* the icon with pseudo class for icon font */
+
+.box-icon {
+  display: block;
+  padding: 30px 0 0 0;
+  -webkit-transition: -webkit-transform .2s;
+          transition:    -moz-transform .2s;
+          transition:         transform .2s;
+}
+
+.box-icon:before {
+  font-family: "FontAwesome";
+  font-size: 7em;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1.9;
+  text-transform: none;
+
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* title element */
+
+.box-grid .box-title {
+  position: relative;
+  margin: 20px 0 10px 0;
+  padding: 20px 0 0 0;
+  font-size: 2em;
+  -webkit-transition: -webkit-transform .2s;
+     -moz-transition:    -moz-transform .2s;
+          transition:         transform .2s;
+}
+
+.box-grid .box-title:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 160px;
+  height: 6px;
+  margin: -10px 0 0 -80px;
+  background: #ae1817;
+  content: "";
+  -webkit-transition: margin-top .2s;
+     -moz-transition: margin-top .2s;
+          transition: margin-top .2s;
+}
+
+.box-grid .box-subtitle {
+  display: inline-block;
+  font-size: 1em;
+  opacity: 0;
+  color: #fff;
+  -webkit-transition: -webkit-transform .3s, opacity .2s;
+  -webkit-transition:         transform .3s, opacity .2s;
+     -moz-transition:    -moz-transform .3s, opacity .2s;
+  -webkit-transform:      translateY(10px);
+     -moz-transform: -moz-translateY(10px);
+      -ms-transform:  -ms-translateY(10px);
+          transform:      translateY(10px);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.box-grid li:hover .box-subtitle,
+.touch .box-grid li .box-subtitle {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+/* hover styles */
+
+.box-grid li > a:hover {
+  background: #ae1817;
+}
+
+.box-grid li > a:hover .box-icon {
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.box-grid li > a:hover .box-icon:before,
+.box-grid li > a:hover .box-title {
+  color: #fff;
+}
+
+.box-grid li > a:hover .box-title {
+  -webkit-transform: translateY(-30px);
+     -moz-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.box-grid li > a:hover .box-title:before {
+  margin-top: 80px;
+  background: #fff;
+}
+
+/*! 2.2. GRID MEDIA QUERIES
+    ========================================================================== */
+
+@media screen and (max-width: 62.75em) {
+  .box-grid li {
+    width: 50%;
+  }
+
+  /* reset the grid lines */
+
+  .box-grid li:nth-child(-n+3) {
+    border-top: 1px solid #ddd;
+  }
+
+  .box-grid li:nth-child(3n-1),
+  .box-grid li:nth-child(3n-2) {
+    box-shadow: none;
+  }
+
+  .box-grid li:nth-child(-n+2) {
+    border-top: none;
+  }
+
+  .box-grid li:nth-child(2n-1) {
+    box-shadow: 1px 0 0 #ddd;
+  }
+}
+
+@media screen and (max-width: 41.6em) {
+  .box-grid li {
+    width: 100%;
+  }
+
+  .box-grid li:nth-child(-n+2) {
+    border-top: 1px solid #ddd;
+  }
+
+  .box-grid li:nth-child(2n-1) {
+    box-shadow: none;
+  }
+
+  .box-grid li:first-child {
+    border-top: none;
+  }
+}
+
+@media screen and (max-width: 25em) {
+  .box-grid {
+    font-size: 80%;
+  }
+
+  .box-grid .box-subtitle {
+    margin-top: 20px;
+  }
+}

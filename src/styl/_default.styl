@@ -18,68 +18,401 @@
    1. DEFAULT
    ========================================================================= */
 
-/*! 1.1. CONTAINER
+/*! 1.1. HEADER
     ========================================================================== */
 
-.container
-  & > header
-    width 90%
-    max-width 69em
-    margin 0 auto
-    padding 2.875em 1.875em 1.875em
-    .saiku-logo
-      display block
-    .description
-      float left
-      margin 0 0 0.6em 0
-      font-size 1.500em
-      font-weight 400
-      line-height 1.3
-    .social
-      position relative
-      top -15px
-      float right
-      text-align center
-      a
-        position relative
-        display inline-block
-        width 2.5em
-        height 2.5em
-        margin 0 .1em
-        border 4px solid #ae1817
-        border-radius 50%
-        background #fff
-        text-align left
-        & > span
-          display none
-        &:hover
-          background-color #ae1817
-          &:before
-            position absolute
-            top 120%
-            right 0
-            width 600%
-            color #ae1817
-            content attr(data-info)
-            text-align right
-            pointer-events none
-          .fa
-            color #fff
-        .fa
-          position absolute
-          top 0
-          left 0
-          width 100%
-          height 100%
-          line-height 2
-          color #ae1817
-          text-align center
-          text-indent 0
+.header {
+  width: 90%;
+  max-width: 69em;
+  margin: 0 auto;
+  padding: 2.875em 1.875em 1.875em;
+}
 
-/*! 1.2. MAIN
+.header .saiku-logo {
+  display: block;
+}
+
+.header .description {
+  float: left;
+  margin: 0 0 .6em 0;
+  font-size: 1.500em;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.header .social {
+  position: relative;
+  top: -15px;
+  float: right;
+  text-align: center;
+}
+
+.header .social a {
+  position: relative;
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0 .1em;
+  border: 4px solid #ae1817;
+  border-radius: 50%;
+  background: #fff;
+  text-align: left;
+}
+
+.header .social a > span {
+  display: none;
+}
+
+.header .social a:hover:before {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 600%;
+  color: #ae1817;
+  content: attr(data-info);
+  text-align: right;
+  pointer-events: none;
+}
+
+.header .social a:hover {
+  background-color: #ae1817;
+}
+
+.header .social a .fa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 2;
+  color: #ae1817;
+  text-align: center;
+  text-indent: 0;
+}
+
+.header .social a:hover .fa {
+  color: #fff;
+}
+
+/*! 1.2. HEADER MEDIA QUERIES
     ========================================================================== */
 
-.main
-  width 90%
-  margin 0 auto
-  padding 1em
+@media screen and (max-width: 55em) {
+  .header .description,
+  .header .social {
+    float: none;
+  }
+
+  .header > .saiku-logo,
+  .header .description {
+    text-align: center;
+  }
+
+  .header .social {
+    margin: 30px auto;
+  }
+}
+
+/*! 1.3. CONTAINER
+    ========================================================================== */
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+/*! 1.4. OVERLAY
+    ========================================================================== */
+
+/* Overlay style */
+
+.overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d8d5cc;
+}
+
+/* Overlay closing cross */
+
+.overlay .overlay-close {
+  position: absolute;
+  z-index: 200;
+  top: 20px;
+  right: 20px;
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: url(../images/cross.svg) no-repeat center center;
+  cursor: pointer;
+  text-indent: 200%;
+}
+
+/* Overlay content */
+
+.overlay-notification {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  text-align: center;
+}
+
+.overlay-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.overlay-container > * {
+  flex: 1 100%;
+}
+
+.overlay-center {
+  position: relative;
+  top: 50%;
+  margin-right: 25%;
+  margin-left: 25%;
+  transform: translateY(-50%);
+}
+
+.overlay-donate-text {
+  padding: 10px;
+}
+
+.overlay-donate-box {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.overlay-donate-box .form-group {
+  display: flex;
+  width: 100%;
+  margin: 5px;
+  justify-content: center;
+}
+
+.overlay-donate-box .form-group input[type="text"] {
+  width: 50%;
+  margin: 5px 1px 3px 0;
+  padding: 3px 0 3px 3px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.overlay-donate-box .btn-donate {
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 2em;
+  margin: 0 .1em;
+  font-weight: bold;
+  border: 4px solid #ae1817;
+  background: #ae1817;
+}
+
+.overlay-donate-box .btn-donate span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 1.4;
+  color: #fff;
+  text-align: center;
+  text-indent: 0;
+}
+
+.overlay-donate-box .btn-donate:hover {
+  opacity: .9;
+}
+
+.overlay-donate-box .btn-donate.btn-lg {
+  width: 17em;
+}
+
+.overlay-donate-box .box-other-value label {
+  margin: 5px 3px 3px 0;
+}
+
+.overlay-donate-box .overlay-sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay-donate-box .overlay-sponsor label,
+.overlay-donate-box .overlay-sponsor select {
+  margin-bottom: 5px;
+}
+
+.overlay-donate-box hr {
+  width: 90%;
+  height: 1px;
+  border: 0;
+  background-image: linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+/* Effects */
+
+.overlay-slidedown {
+  visibility: hidden;
+  transition: transform .4s ease-in-out, visibility 0s .4s;
+  transform: translateY(-100%);
+}
+
+.overlay-slidedown.open {
+  visibility: visible;
+  transition: transform .4s ease-in-out;
+  transform: translateY(0%);
+}
+
+/*! 1.5. OVERLAY MEDIA QUERIES
+    ========================================================================== */
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .overlay ul li {
+    min-height: 34px;
+  }
+}
+
+/* large devices, wide screens */
+
+@media only screen and (max-width: 1200px) {
+}
+
+/* medium devices, desktops */
+
+@media only screen and (max-width: 992px) {
+  /* Overlay content */
+
+  .overlay-notification {
+    right: 15%;
+    left: 15%;
+    display: block;
+  }
+
+  .overlay-center {
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+
+  .overlay-donate-text {
+    display: none;
+  }
+}
+
+/* small devices, tablets landscape */
+
+@media only screen and (max-width: 768px) {
+  /* Overlay content */
+
+  .overlay-notification {
+    right: 15%;
+    left: 15%;
+    display: block;
+  }
+
+  .overlay-center {
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+
+  .overlay-donate-text {
+    display: none;
+  }
+}
+
+/* small devices, tablets portrait */
+
+@media only screen and (max-width: 600px) {
+  /* Overlay closing cross */
+
+  .overlay .overlay-close {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Overlay content */
+
+  .overlay-notification {
+    display: block;
+  }
+
+  .overlay-center {
+    top: 45%;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+
+  .overlay-donate-text {
+    display: none;
+  }
+}
+
+/* extra small devices, phones */
+
+@media only screen and (max-width: 480px) {
+  /* Overlay closing cross */
+
+  .overlay .overlay-close {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Overlay content */
+
+  .overlay-notification {
+    display: block;
+  }
+
+  .overlay-center {
+    top: 45%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .overlay-donate-text {
+    display: none;
+  }
+}
+
+/* custom, iphone retina */
+
+@media only screen and (max-width: 360px) {
+  /* Overlay closing cross */
+
+  .overlay .overlay-close {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Overlay content */
+
+  .overlay-notification {
+    display: block;
+  }
+
+  .overlay-center {
+    top: 45%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .overlay-donate-text {
+    display: none;
+  }
+}
