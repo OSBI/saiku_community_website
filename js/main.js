@@ -15,12 +15,13 @@
  */
 
 (function() {
-  var btnTrigger = document.querySelector('a#trigger-overlay');
-  var overlay = document.querySelector('div.overlay');
-  var btnClose = overlay.querySelector('button.overlay-close');
-  var btnOtherValue = document.querySelector('a#btn-other-value');
-  var inputOtherValue = document.querySelector('input#other-value');
-  var boxOtherValue = document.querySelector('div.box-other-value');
+  var btnTrigger = document.querySelector('#trigger-overlay');
+  var overlay = document.querySelector('.overlay');
+  var btnClose = overlay.querySelector('.overlay-close');
+  var btnOtherValue = document.querySelector('#btn-other-value');
+  var inputOtherValue = document.querySelector('#other-value');
+  var btnPay = document.querySelector('#btn-pay');
+  var boxOtherValue = document.querySelector('.box-other-value');
   var transEndEventNames = {
     WebkitTransition : 'webkitTransitionEnd',
     MozTransition    : 'transitionend',
@@ -31,7 +32,11 @@
   var transEndEventName = transEndEventNames[Modernizr.prefixed('transition')];
   var support = { transitions : Modernizr.csstransitions };
 
-  function toggleOverlay(isEscape) {
+  function toggleOverlay(event) {
+    if (event) {
+      event.preventDefault();
+    }
+
     if (classie.has(overlay, 'open')) {
       classie.remove(overlay, 'open');
       classie.add(overlay, 'close');
@@ -62,7 +67,27 @@
     }
   }
 
-  function toggleBtnOtherValue() {
+  function escKeyCloseOverlay() {
+    document.onkeydown = function(event) {
+      var isEscape = false;
+      event = event || window.event;
+
+      if ('key' in event) {
+        isEscape = event.key === 'Escape';
+      }
+      else {
+        isEscape = event.keyCode === 27;
+      }
+
+      if (isEscape && classie.has(overlay, 'open')) {
+        toggleOverlay();
+      }
+    };
+  }
+
+  function toggleBtnOtherValue(event) {
+    event.preventDefault();
+
     if (classie.has(boxOtherValue, 'hide')) {
       classie.remove(boxOtherValue, 'hide');
       classie.add(boxOtherValue, 'show');
@@ -73,24 +98,36 @@
     }
   }
 
-  // Capturing the `ESC` key and close overlay
-  document.onkeydown = function(event) {
-    var isEscape = false;
-    event = event || window.event;
+  function goPayCustom(event) {
+    event.preventDefault();
 
-    if ('key' in event) {
-      isEscape = event.key === 'Escape';
+    var customValue = inputOtherValue.value;
+    var windowOpen;
+
+    if (customValue != null && customValue > 0) {
+      windowOpen = window.open('http://sites.fastspring.com/meteoriteconsulting/product/cedownloadcustom?tags=total=' + (customValue * 100), '_blank')
+
+      if (windowOpen) {
+        // Browser has allowed it to be opened
+        windowOpen.focus;
+      }
+      else {
+        // Broswer has blocked it
+        alert('Please allow popups for this site!');
+      }
+    }
+    else if (customValue != null && customValue == 0) {
+      window.location.href = 'http://meteorite.bi/downloads/saiku-latest.zip';
     }
     else {
-      isEscape = event.keyCode === 27;
+      alert('Invalid value!');
     }
+  }
 
-    if (isEscape && classie.has(overlay, 'open')) {
-      toggleOverlay();
-    }
-  };
+  escKeyCloseOverlay();
 
   btnTrigger.addEventListener('click', toggleOverlay);
   btnClose.addEventListener('click', toggleOverlay);
   btnOtherValue.addEventListener('click', toggleBtnOtherValue);
+  btnPay.addEventListener('click', goPayCustom);
 })();
