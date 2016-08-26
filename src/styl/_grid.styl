@@ -43,7 +43,7 @@
   float: left;
   width: 33%;
   height: 420px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid $gray;
   text-align: center;
 }
 
@@ -58,7 +58,7 @@
 
 .box-grid li:nth-child(3n-1),
 .box-grid li:nth-child(3n-2) {
-  box-shadow: 1px 0 0 #ddd;
+  box-shadow: 1px 0 0 $gray;
 }
 
 /* anchor style */
@@ -66,7 +66,7 @@
 .box-grid li > a {
   display: block;
   height: 100%;
-  color: #ae1817;
+  color: $saiku;
   -webkit-transition: background .2s;
      -moz-transition: background .2s;
           transition: background .2s;
@@ -83,7 +83,7 @@
 }
 
 .box-icon:before {
-  font-family: "FontAwesome";
+  font-family: $font-icon;
   font-size: 7em;
   font-weight: normal;
   font-style: normal;
@@ -114,7 +114,7 @@
   width: 160px;
   height: 6px;
   margin: -10px 0 0 -80px;
-  background: #ae1817;
+  background: $saiku;
   content: "";
   -webkit-transition: margin-top .2s;
      -moz-transition: margin-top .2s;
@@ -125,7 +125,7 @@
   display: inline-block;
   font-size: 1em;
   opacity: 0;
-  color: #fff;
+  color: $white;
   -webkit-transition: -webkit-transform .3s, opacity .2s;
   -webkit-transition:         transform .3s, opacity .2s;
      -moz-transition:    -moz-transform .3s, opacity .2s;
@@ -149,7 +149,7 @@
 /* hover styles */
 
 .box-grid li > a:hover {
-  background: #ae1817;
+  background: $saiku;
 }
 
 .box-grid li > a:hover .box-icon {
@@ -161,7 +161,7 @@
 
 .box-grid li > a:hover .box-icon:before,
 .box-grid li > a:hover .box-title {
-  color: #fff;
+  color: $white;
 }
 
 .box-grid li > a:hover .box-title {
@@ -173,7 +173,7 @@
 
 .box-grid li > a:hover .box-title:before {
   margin-top: 80px;
-  background: #fff;
+  background: $white;
 }
 
 /*! 2.2. GRID MEDIA QUERIES
@@ -187,7 +187,7 @@
   /* reset the grid lines */
 
   .box-grid li:nth-child(-n+3) {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $gray;
   }
 
   .box-grid li:nth-child(3n-1),
@@ -200,7 +200,7 @@
   }
 
   .box-grid li:nth-child(2n-1) {
-    box-shadow: 1px 0 0 #ddd;
+    box-shadow: 1px 0 0 $gray;
   }
 }
 
@@ -210,7 +210,7 @@
   }
 
   .box-grid li:nth-child(-n+2) {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $gray;
   }
 
   .box-grid li:nth-child(2n-1) {

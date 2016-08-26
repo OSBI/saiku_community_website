@@ -53,9 +53,9 @@
   width: 2.5em;
   height: 2.5em;
   margin: 0 .1em;
-  border: 4px solid #ae1817;
+  border: 4px solid $saiku;
   border-radius: 50%;
-  background: #fff;
+  background: $white;
   text-align: left;
 }
 
@@ -68,14 +68,14 @@
   top: 120%;
   right: 0;
   width: 600%;
-  color: #ae1817;
+  color: $saiku;
   content: attr(data-info);
   text-align: right;
   pointer-events: none;
 }
 
 .header .social a:hover {
-  background-color: #ae1817;
+  background-color: $saiku;
 }
 
 .header .social a .fa {
@@ -85,13 +85,13 @@
   width: 100%;
   height: 100%;
   line-height: 2;
-  color: #ae1817;
+  color: $saiku;
   text-align: center;
   text-indent: 0;
 }
 
 .header .social a:hover .fa {
-  color: #fff;
+  color: $white;
 }
 
 /*! 1.2. HEADER MEDIA QUERIES
@@ -178,7 +178,8 @@
   top: 50%;
   margin-right: 25%;
   margin-left: 25%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .overlay-donate-text {
@@ -205,7 +206,7 @@
   width: 50%;
   margin: 5px 1px 3px 0;
   padding: 3px 0 3px 3px;
-  border: 1px solid #ddd;
+  border: 1px solid $gray;
   outline: none;
 }
 
@@ -216,8 +217,8 @@
   height: 2em;
   margin: 0 .1em;
   font-weight: bold;
-  border: 4px solid #ae1817;
-  background: #ae1817;
+  border: 4px solid $saiku;
+  background: $saiku;
 }
 
 .overlay-donate-box .btn-donate span {
@@ -227,7 +228,7 @@
   width: 100%;
   height: 100%;
   line-height: 1.4;
-  color: #fff;
+  color: $white;
   text-align: center;
   text-indent: 0;
 }
@@ -259,21 +260,28 @@
   width: 90%;
   height: 1px;
   border: 0;
-  background-image: linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image:    -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image:     -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+  background-image:      -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
 /* Effects */
 
 .overlay-slidedown {
   visibility: hidden;
-  transition: transform .4s ease-in-out, visibility 0s .4s;
-  transform: translateY(-100%);
+  -webkit-transition: -webkit-transform .4s ease-in-out, visibility 0s .4s;
+          transition:         transform .4s ease-in-out, visibility 0s .4s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .overlay-slidedown.open {
   visibility: visible;
-  transition: transform .4s ease-in-out;
-  transform: translateY(0%);
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+          transition:         transform .4s ease-in-out;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 /*! 1.5. OVERLAY MEDIA QUERIES
