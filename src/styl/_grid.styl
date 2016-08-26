@@ -14,12 +14,12 @@
  *   limitations under the License.
  */
 
- /*! =========================================================================
+/* ==========================================================================
    2. BOX GRID
-   ========================================================================= */
+   ========================================================================== */
 
-/*! 2.1. GENERAL GRID STYLES
-    ========================================================================== */
+/* 2.1. GENERAL GRID STYLES
+   ========================================================================== */
 
 .box-grid:before,
 .box-grid:after {
@@ -67,9 +67,7 @@
   display: block;
   height: 100%;
   color: $saiku;
-  -webkit-transition: background .2s;
-     -moz-transition: background .2s;
-          transition: background .2s;
+  transition: background .2s;
 }
 
 /* the icon with pseudo class for icon font */
@@ -77,9 +75,7 @@
 .box-icon {
   display: block;
   padding: 30px 0 0 0;
-  -webkit-transition: -webkit-transform .2s;
-          transition:    -moz-transform .2s;
-          transition:         transform .2s;
+  transition: transform .2s;
 }
 
 .box-icon:before {
@@ -90,9 +86,9 @@
   font-variant: normal;
   line-height: 1.9;
   text-transform: none;
-
   speak: none;
   -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
 }
 
 /* title element */
@@ -102,9 +98,7 @@
   margin: 20px 0 10px 0;
   padding: 20px 0 0 0;
   font-size: 2em;
-  -webkit-transition: -webkit-transform .2s;
-     -moz-transition:    -moz-transform .2s;
-          transition:         transform .2s;
+  transition: transform .2s;
 }
 
 .box-grid .box-title:before {
@@ -116,9 +110,7 @@
   margin: -10px 0 0 -80px;
   background: $saiku;
   content: "";
-  -webkit-transition: margin-top .2s;
-     -moz-transition: margin-top .2s;
-          transition: margin-top .2s;
+  transition: margin-top .2s;
 }
 
 .box-grid .box-subtitle {
@@ -126,13 +118,8 @@
   font-size: 1em;
   opacity: 0;
   color: $white;
-  -webkit-transition: -webkit-transform .3s, opacity .2s;
-  -webkit-transition:         transform .3s, opacity .2s;
-     -moz-transition:    -moz-transform .3s, opacity .2s;
-  -webkit-transform:      translateY(10px);
-     -moz-transform: -moz-translateY(10px);
-      -ms-transform:  -ms-translateY(10px);
-          transform:      translateY(10px);
+  transition: transform .3s, opacity .2s;
+  transform: translateY(10px);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -140,10 +127,7 @@
 .box-grid li:hover .box-subtitle,
 .touch .box-grid li .box-subtitle {
   opacity: 1;
-  -webkit-transform: translateY(0px);
-     -moz-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-          transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 /* hover styles */
@@ -153,10 +137,7 @@
 }
 
 .box-grid li > a:hover .box-icon {
-  -webkit-transform: translateY(10px);
-     -moz-transform: translateY(10px);
-      -ms-transform: translateY(10px);
-          transform: translateY(10px);
+  transform: translateY(10px);
 }
 
 .box-grid li > a:hover .box-icon:before,
@@ -165,10 +146,7 @@
 }
 
 .box-grid li > a:hover .box-title {
-  -webkit-transform: translateY(-30px);
-     -moz-transform: translateY(-30px);
-      -ms-transform: translateY(-30px);
-          transform: translateY(-30px);
+  transform: translateY(-30px);
 }
 
 .box-grid li > a:hover .box-title:before {
@@ -176,8 +154,8 @@
   background: $white;
 }
 
-/*! 2.2. GRID MEDIA QUERIES
-    ========================================================================== */
+/* 2.2. GRID MEDIA QUERIES
+   ========================================================================== */
 
 @media screen and (max-width: 62.75em) {
   .box-grid li {
