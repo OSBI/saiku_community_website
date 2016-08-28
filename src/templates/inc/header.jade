@@ -1,0 +1,9 @@
+header(class="header clearfix")
+  a(class="saiku-logo" href="http://community.meteorite.bi")
+    img(src="images/saiku-logo.png" width="200" height="34" alt="Saiku Logo")
+  h1(class="description") Community
+  nav(class="social")
+    - each social in data.social
+      a(href="#{social.url}" target="_blank" data-info="#{social.name}")
+        i(class="fa fa-#{social.icon}")
+        span #{social.name}
