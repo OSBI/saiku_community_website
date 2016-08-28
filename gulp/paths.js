@@ -2,8 +2,8 @@
 
 module.exports = {
   source: {
+    bowerDir: './bower_components',
     templates: './src/templates/**/*.jade',
-    slides: './src/slides/*.md',
     js: './src/js/**/*.js',
     styl: './src/styl/**/*.styl',
     img: './src/images/**/*',
@@ -24,6 +24,7 @@ module.exports = {
     html: './build/',
     css: './build/css',
     js: './build/js',
-    img: './build/images'
+    img: './build/images',
+    fonts: './build/fonts'
   }
 };

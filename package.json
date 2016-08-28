@@ -1,7 +1,7 @@
 {
   "name": "saiku_community_website",
-  "version": "1.0.0",
-  "description": "Saiku Community",
+  "version": "2.0.0",
+  "description": "Saiku Analytics - The world's greatest open source OLAP browser.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OSBI/saiku_community_website.git"
@@ -20,7 +20,11 @@
   },
   "homepage": "https://github.com/OSBI/saiku_community_website#readme",
   "scripts": {
-    "clean": "rm -r node_modules/; rm -r build/"
+    "clean": "rm -r node_modules; rm -r bower_components; rm -r build; rm -r npm-debug.log"
+  },
+  "engines": {
+    "node": ">=0.10.x",
+    "npm": ">=1.3.x"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -28,6 +32,7 @@
     "css-mqpacker": "^5.0.1",
     "csswring": "^5.1.0",
     "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
     "gulp-cache": "^0.4.5",
     "gulp-csscomb": "^3.0.7",
     "gulp-imagemin": "^3.0.2",
