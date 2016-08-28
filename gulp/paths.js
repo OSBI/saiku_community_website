@@ -8,6 +8,7 @@ module.exports = {
     styl: './src/styl/**/*.styl',
     img: './src/images/**/*',
     files: {
+      copy: ['./src/humans.txt', './src/favicon.ico'],
       jade: './src/templates/index.jade',
       styl: './src/styl/main.styl'
     }
@@ -21,6 +22,7 @@ module.exports = {
   },
 
   build: {
+    root: './build/',
     html: './build/',
     css: './build/css',
     js: './build/js',
