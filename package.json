@@ -29,14 +29,12 @@
     "csswring": "^5.1.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.5",
-    "gulp-concat": "^2.6.0",
     "gulp-csscomb": "^3.0.7",
     "gulp-imagemin": "^3.0.2",
     "gulp-jade": "^1.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.1.1",
     "gulp-stylus": "^2.5.0",
-    "gulp-uglify": "^2.0.0",
-    "gulp-util": "^3.0.7"
+    "gulp-uglify": "^2.0.0"
   }
 }
