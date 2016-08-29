@@ -76,7 +76,7 @@ module.exports = {
     {
       title: 'Wiki',
       subtitle: 'wiki.meteorite.bi',
-      icon: 'text-o',
+      icon: 'file-text-o',
       url: 'http://wiki.meteorite.bi/display/SAIK/Saiku',
       id: null
     },

@@ -1,14 +1,15 @@
 main(class="container")
   ul(class="box-grid")
     - each main in data.main
-      li
       if main.id
-        a(id="#{main.id}" href="#{main.url}")
-          span(class="box-icon fa fa-#{main.icon}")
-          h3(class="box-title") #{main.title}
-          span(class="box-subtitle") #{main.subtitle}
+        li
+          a(id="#{main.id}" href="#{main.url}")
+            span(class="box-icon fa fa-#{main.icon}")
+            h3(class="box-title") #{main.title}
+            span(class="box-subtitle") #{main.subtitle}
       else
-        a(href="#{main.url}" target="_blank")
-          span(class="box-icon fa fa-#{main.icon}")
-          h3(class="box-title") #{main.title}
-          span(class="box-subtitle") #{main.subtitle}
+        li
+          a(href="#{main.url}" target="_blank")
+            span(class="box-icon fa fa-#{main.icon}")
+            h3(class="box-title") #{main.title}
+            span(class="box-subtitle") #{main.subtitle}

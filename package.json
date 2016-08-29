@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/OSBI/saiku_community_website#readme",
   "scripts": {
-    "clean": "rm -r node_modules; rm -r bower_components; rm -r build; rm -r npm-debug.log"
+    "clean": "rm -r node_modules; rm -r bower_components; rm -r build; rm -r npm-debug.log",
+    "build": "gulp bower-install; gulp default"
   },
   "engines": {
     "node": ">=0.10.x",

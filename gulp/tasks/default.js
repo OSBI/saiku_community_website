@@ -5,4 +5,4 @@ var gulp = require('gulp');
 
 // Default task
 module.exports = gulp.task('default', ['js', 'jade', 'stylus', 'imagemin',
-  'watch', 'browser-sync']);
+  'copy-files', 'watch', 'browser-sync']);
