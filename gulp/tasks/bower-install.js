@@ -29,7 +29,7 @@ gulp.task('bower', function() {
 });
 
 // Call Font Awesome
-gulp.task('fontAwesome', function() {
+gulp.task('fontAwesome', ['bower'], function() {
   gulp.src(paths.source.bowerDir + '/font-awesome/css/font-awesome.min.css')
     .pipe(plumber())
     .pipe(gulp.dest(paths.build.css));
@@ -39,7 +39,7 @@ gulp.task('fontAwesome', function() {
 });
 
 // Call Classie
-gulp.task('classie', function() {
+gulp.task('classie', ['bower'], function() {
   gulp.src(paths.source.bowerDir + '/classie/classie.js')
     .pipe(plumber())
     .pipe(gulp.dest(paths.build.js));
