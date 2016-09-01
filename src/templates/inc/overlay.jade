@@ -1,0 +1,60 @@
+div(class="overlay overlay-slidedown")
+  button(type="button" class="overlay-close") Close
+
+  div(class="overlay-notification")
+    h3 Sponsor Saiku Analytics!
+    p If you use Saiku CE in your business, please consider donating to the project.
+
+  div(class="overlay-container overlay-center")
+    div(class="overlay-donate-text")
+      h3 Sponsor Saiku Analytics!
+      p Building, testing and deploying Saiku Community Edition costs both time and money.
+      p If you use Saiku CE in your business, please consider donating to the project. The servers we run, the software we build and release under the Apache License, we do so because we love the open source model and we believe in giving back as well as consuming other developers code.
+      p Without donations to the project, it makes releasing Saiku under an open source license very difficult because we have bills to pay and families to feed! So please consider funding open source development and helping Saiku prosper and grow further.
+
+    div(class="overlay-donate-box")
+      form(action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal")
+        h3 Donate
+        h4 Credit Card
+
+        div(class="form-group")
+          a(class="btn-donate" href="http://sites.fastspring.com/meteoriteconsulting/product/cedonation10" target="_blank")
+            span $10
+          a(class="btn-donate" href="http://sites.fastspring.com/meteoriteconsulting/product/cedownload25" target="_blank")
+            span $25
+          a(class="btn-donate" href="http://sites.fastspring.com/meteoriteconsulting/product/cedownload50" target="_blank")
+            span $50
+
+        div(class="form-group")
+          a(class="btn-donate" id="btn-other-value" href="#" target="_blank")
+            span Other
+
+        div(class="box-other-value hide")
+          div(class="form-group")
+            label(for="other-value") $
+            input(id="other-value" type="text")
+          div(class="form-group")
+            a(class="btn-donate" id="btn-pay" href="#" target="_blank")
+              span Pay!
+
+        hr
+
+        h4 Paypal
+
+        div(class="form-group overlay-sponsor")
+          label Sponsor Amount
+          select(name="os0")
+            option(value="Thanks a lot!") Thanks a lot! $10.00 USD
+            option(value="We love you!") We love you! $25.00 USD
+            option(value="Amazing!") Amazing! $50.00 USD
+          input(type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif" name="submit" alt="PayPal – The safer, easier way to pay online.")
+          input(type="hidden" name="cmd" value="_s-xclick")
+          input(type="hidden" name="hosted_button_id" value="EYAG7FLL3AEL6")
+          input(type="hidden" name="on0" value="Sponsor Amount")
+          input(type="hidden" name="currency_code" value="USD")
+
+        hr
+
+        div(class="form-group")
+          a(class="btn-donate btn-lg" href="http://meteorite.bi/downloads/saiku-latest.zip")
+            span Download without sponsoring

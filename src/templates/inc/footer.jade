@@ -1,9 +1,9 @@
 footer(class="credits")
   p Made with <span class="love">♥</span> by these people and a bunch of awesome contributors.
-    ul
-      - each github in data.footer.github
-        li
-          p
-            a(href="#{github.url}" target="_target")
-              img(src="#{github.image}" alt="#{github.name}")
-              span #{github.nameRaw}
+  ul
+    - each github in data.footer.github
+      li
+        p
+          a(href="#{github.url}" target="_blank")
+            img(src="#{github.image}" alt="#{github.name}")
+            span #{github.firstName} #{github.lastName}

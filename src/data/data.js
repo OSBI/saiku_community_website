@@ -106,25 +106,29 @@ module.exports = {
     github: [
       {
         name: 'Breno Polanski',
-        nameRaw: 'Breno<br>Polanski',
+        firstName: 'Breno',
+        lastName: 'Polanski',
         url: 'https://github.com/brenopolanski',
         image: 'https://avatars1.githubusercontent.com/u/1894191?v=3&s=50'
       },
       {
         name: 'Luis E. Garcia',
-        nameRaw: 'Luis E.<br>Garcia',
+        firstName: 'Luis E.',
+        lastName: 'Garcia',
         url: 'https://github.com/PeterFalken',
         image: 'https://avatars2.githubusercontent.com/u/2557898?v=3&s=50'
       },
       {
         name: 'Tom Barber',
-        nameRaw: 'Tom<br>Barber',
+        firstName: 'Tom',
+        lastName: 'Barber',
         url: 'https://github.com/buggtb',
         image: 'https://avatars1.githubusercontent.com/u/103544?v=3&s=50'
       },
       {
         name: 'Paul Stoellberger',
-        nameRaw: 'Paul<br>Stoellberger',
+        firstName: 'Paul',
+        lastName: 'Stoellberger',
         url: 'https://github.com/pstoellberger',
         image: 'https://avatars1.githubusercontent.com/u/454645?v=3&s=50'
       }

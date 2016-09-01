@@ -12,7 +12,7 @@ module.exports = gulp.task('jade', function() {
   return gulp.src(paths.source.files.jade)
     .pipe(plumber())
     .pipe(jade({
-      pretty: true,
+      pretty: false,
       locals: {
         data: data
       }
