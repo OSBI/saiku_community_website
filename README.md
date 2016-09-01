@@ -4,6 +4,35 @@
 
 This repository contains the source code of the website [community.meteorite.bi](http://community.meteorite.bi/). If you're looking for the source code of the project, check the official [Saiku](https://github.com/OSBI/saiku) and [Saiku UI](https://github.com/OSBI/saiku-ui) repository.
 
+## Getting Started
+
+### Installation
+
+First of all, install the dependencies to run this boilerplate.
+
+- [NodeJS](http://nodejs.org/)
+- [GulpJS](http://gulpjs.com/)
+
+```sh
+# Clone this repository
+$ git clone git@github.com:OSBI/saiku_community_website.git
+$ cd saiku_community_website
+
+# install dependencies
+$ npm install
+# run tasks and serve
+$ gulp
+```
+
+### Tasks
+
+- `gulp`: Initialize watch for changes and a server (localhost:3000);
+- `gulp js`: Execute js files;
+- `gulp stylus`: Compile stylus files;
+- `gulp imagemin`: Compress image files;
+- `gulp watch`: Call for watch files;
+- `gulp jade`: Compile jade files.
+
 ## Contributing
 
 1. Fork it!
