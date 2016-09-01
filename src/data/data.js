@@ -132,10 +132,6 @@ module.exports = {
         url: 'https://github.com/pstoellberger',
         image: 'https://avatars1.githubusercontent.com/u/454645?v=3&s=50'
       }
-    ],
-    company: {
-      name: '',
-      url: ''
-    }
+    ]
   }
 };
