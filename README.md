@@ -2,7 +2,7 @@
 
 [![saiku-community-website-preview](preview.png)](http://community.meteorite.bi/)
 
-This repository contains the source code of the website [community.meteorite.bi](http://community.meteorite.bi/). If you're looking for the source code of the project, check the official [Saiku](https://github.com/OSBI/saiku) and [Saiku UI](https://github.com/OSBI/saiku-ui) repository.
+This repository contains the source code of the website [community.meteorite.bi](http://community.meteorite.bi/). If you're looking for the source code of the project, check the official [Saiku](https://github.com/OSBI/saiku) repository.
 
 ## Getting Started
 
@@ -27,11 +27,14 @@ $ gulp
 ### Tasks
 
 - `gulp`: Initialize watch for changes and a server (localhost:3000);
+- `gulp bower-install`: Call for bower and dependencies;
+- `gulp copy-files`: Call for copy files;
 - `gulp js`: Execute js files;
 - `gulp stylus`: Compile stylus files;
 - `gulp imagemin`: Compress image files;
 - `gulp watch`: Call for watch files;
-- `gulp jade`: Compile jade files.
+- `gulp jade`: Compile jade files;
+- `gulp browser-sync`: Serve files from `/www/`.
 
 ## Contributing
 
