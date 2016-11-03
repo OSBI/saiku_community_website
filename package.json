@@ -1,11 +1,37 @@
 {
   "name": "saiku_community_website",
+  "description": "Saiku Analytics - The world's greatest open source OLAP browser",
+  "homepage": "https://github.com/OSBI/saiku_community_website#readme",
   "version": "2.0.0",
-  "description": "Saiku Analytics - The world's greatest open source OLAP browser.",
+  "author": {
+    "name": "Meteorite BI",
+    "email": "info@meteorite.bi",
+    "web": "http://www.meteorite.bi"
+  },
+  "contributors": [
+    {
+      "name": "Breno Polanski",
+      "url": "https://github.com/brenopolanski"
+    },
+    {
+      "name": "Bruno Gama Catão",
+      "url": "https://github.com/brunogamacatao"
+    },
+    {
+      "name": "Tom Barber",
+      "url": "https://github.com/buggtb"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OSBI/saiku_community_website.git"
   },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "https://github.com/OSBI/saiku-report-viewer-ui/blob/master/LICENSE"
+    }
+  ],
   "keywords": [
     "meteorite-bi",
     "saiku",
@@ -13,12 +39,9 @@
     "analytics-client",
     "business-intelligence"
   ],
-  "author": "Meteorite BI",
-  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/OSBI/saiku_community_website/issues"
+    "url": "http://jira.meteorite.bi"
   },
-  "homepage": "https://github.com/OSBI/saiku_community_website#readme",
   "scripts": {
     "clean": "rm -r node_modules; rm -r bower_components; rm -r build; rm -r npm-debug.log"
   },
