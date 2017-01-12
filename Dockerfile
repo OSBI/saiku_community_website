@@ -1,2 +1,2 @@
 FROM nginx
-COPY static /usr/share/nginx/html
+COPY buildy /usr/share/nginx/html
