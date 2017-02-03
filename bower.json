@@ -13,7 +13,7 @@
     "tests"
   ],
   "devDependencies": {
-    "font-awesome": "^4.6.3",
+    "font-awesome": "^4.7.0",
     "classie": "^1.0.1"
   }
 }

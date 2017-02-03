@@ -8,7 +8,7 @@ This repository contains the source code of the website [community.meteorite.bi]
 
 ### Installation
 
-First of all, install the dependencies to run this boilerplate.
+First of all, install the dependencies to run this website.
 
 - [NodeJS](http://nodejs.org/)
 - [GulpJS](http://gulpjs.com/)
@@ -19,14 +19,14 @@ $ git clone git@github.com:OSBI/saiku_community_website.git
 $ cd saiku_community_website
 
 # install dependencies
-$ npm install
+$ yarn (or npm i)
 # run tasks and serve
 $ gulp
 ```
 
 ### Tasks
 
-- `gulp`: Initialize watch for changes and a server (localhost:3000);
+- `gulp`: Initialize watch for changes and a server ([localhost:3000](http://localhost:3000/));
 - `gulp bower-install`: Call for bower and dependencies;
 - `gulp copy-files`: Call for copy files;
 - `gulp js`: Execute js files;
