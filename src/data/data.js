@@ -112,6 +112,13 @@ module.exports = {
         image: 'https://avatars1.githubusercontent.com/u/1894191?v=3&s=50'
       },
       {
+        name: 'Bruno Gama Catão',
+        firstName: 'Bruno',
+        lastName: 'Catão',
+        url: 'https://github.com/brunogamacatao',
+        image: 'https://avatars2.githubusercontent.com/u/785116?v=3&s=50'
+      },
+      {
         name: 'Luis E. Garcia',
         firstName: 'Luis E.',
         lastName: 'Garcia',

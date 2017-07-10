@@ -22,7 +22,7 @@ var browserSync = require('browser-sync');
 var paths       = require('../paths');
 
 // Serve files from /www/
-module.exports = gulp.task('browser-sync', function() {
+module.exports = gulp.task('browser-sync', () => {
   var files = [
     paths.browserSync.html,
     paths.browserSync.js,

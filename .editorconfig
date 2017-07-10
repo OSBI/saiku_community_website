@@ -1,6 +1,10 @@
-# EditorConfig helps developers define and maintain consistent
-# coding styles between different editors and IDEs
+#
+# EditorConfig configuration file for Meteorite BI projects
+# https://github.com/OSBI
+#
+# A full description of all rules presented here can be found at EditorConfig's website
 # http://editorconfig.org
+#
 
 root = true
 

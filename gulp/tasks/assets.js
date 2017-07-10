@@ -1,5 +1,5 @@
 /**
- *   Copyright 2016 OSBI Ltd
+ *   Copyright 2017 OSBI Ltd
  *
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
@@ -19,31 +19,24 @@
 // Necessary Plugins
 var gulp    = require('gulp');
 var plumber = require('gulp-plumber');
-var bower   = require('gulp-bower');
 var paths   = require('../paths');
 
-// Call Bower
-gulp.task('bower', function() {
-  return bower()
-    .pipe(gulp.dest(paths.source.bowerDir));
-});
-
 // Call Font Awesome
-gulp.task('fontAwesome', ['bower'], function() {
-  gulp.src(paths.source.bowerDir + '/font-awesome/css/font-awesome.min.css')
+gulp.task('fontAwesome', () => {
+  gulp.src(`${paths.source.nodeDir}/font-awesome/css/font-awesome.min.css`)
     .pipe(plumber())
     .pipe(gulp.dest(paths.build.css));
-  gulp.src(paths.source.bowerDir + '/font-awesome/fonts/**.*')
+  gulp.src(`${paths.source.nodeDir}/font-awesome/fonts/**.*`)
     .pipe(plumber())
     .pipe(gulp.dest(paths.build.fonts));
 });
 
 // Call Classie
-gulp.task('classie', ['bower'], function() {
-  gulp.src(paths.source.bowerDir + '/classie/classie.js')
+gulp.task('classie', () => {
+  gulp.src(`${paths.source.nodeDir}/desandro-classie/classie.js`)
     .pipe(plumber())
     .pipe(gulp.dest(paths.build.js));
 });
 
-// Call Bower Install
-module.exports = gulp.task('bower-install', ['bower', 'fontAwesome', 'classie']);
+// Call Assets Install
+module.exports = gulp.task('assets-install', ['fontAwesome', 'classie']);

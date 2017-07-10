@@ -24,7 +24,7 @@ var imagemin = require('gulp-imagemin');
 var paths    = require('../paths');
 
 // Call Imagemin
-module.exports = gulp.task('imagemin', function() {
+module.exports = gulp.task('imagemin', () => {
   return gulp.src(paths.source.img)
     .pipe(plumber())
     .pipe(cache(imagemin({

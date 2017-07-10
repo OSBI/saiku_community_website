@@ -27,7 +27,7 @@ $ gulp
 ### Tasks
 
 - `gulp`: Initialize watch for changes and a server ([localhost:3000](http://localhost:3000/));
-- `gulp bower-install`: Call for bower and dependencies;
+- `gulp assets-install`: Call for install assets;
 - `gulp copy-files`: Call for copy files;
 - `gulp js`: Execute js files;
 - `gulp stylus`: Compile stylus files;
@@ -48,4 +48,4 @@ English is the universal language nowadays, so please don't create or comment on
 
 ## License
 
-[Apache License Version 2](https://github.com/OSBI/saiku_community_website/blob/master/LICENSE) © Meteorite BI
+[Apache License Version 2](https://github.com/OSBI/saiku_community_website/blob/master/LICENSE) © [Meteorite BI](http://www.meteorite.bi/)

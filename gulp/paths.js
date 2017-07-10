@@ -18,7 +18,7 @@
 
 module.exports = {
   source: {
-    bowerDir: './bower_components',
+    nodeDir: './node_modules',
     templates: './src/templates/**/*.jade',
     js: './src/js/**/*.js',
     styl: './src/styl/**/*.styl',

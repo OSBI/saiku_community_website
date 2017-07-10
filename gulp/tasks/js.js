@@ -23,7 +23,7 @@ var uglify  = require('gulp-uglify');
 var paths   = require('../paths');
 
 // Call Uglify and concat JS
-module.exports = gulp.task('js', function() {
+module.exports = gulp.task('js', () => {
   return gulp.src(paths.source.js)
     .pipe(plumber())
     .pipe(uglify())

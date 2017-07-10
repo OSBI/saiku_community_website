@@ -24,7 +24,7 @@ var data    = require('../../src/data/data');
 var paths   = require('../paths');
 
 // Call Jade to compile templates
-module.exports = gulp.task('jade', function() {
+module.exports = gulp.task('jade', () => {
   return gulp.src(paths.source.files.jade)
     .pipe(plumber())
     .pipe(jade({

@@ -21,7 +21,7 @@ var gulp  = require('gulp');
 var paths = require('../paths');
 
 // Call Watch
-module.exports = gulp.task('watch', function() {
+module.exports = gulp.task('watch', () => {
   gulp.watch(paths.source.templates, ['jade']);
   gulp.watch(paths.source.js, ['js']);
   gulp.watch(paths.source.styl, ['stylus']);

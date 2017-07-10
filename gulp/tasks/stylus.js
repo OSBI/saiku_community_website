@@ -28,7 +28,7 @@ var csscomb      = require('gulp-csscomb');
 var paths        = require('../paths');
 
 // Call Stylus
-module.exports = gulp.task('stylus', function() {
+module.exports = gulp.task('stylus', () => {
   var processors = [
     autoprefixer({ browsers: ['last 3 versions'] }),
     mqpacker,
