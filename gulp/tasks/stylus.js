@@ -17,19 +17,19 @@
 'use strict';
 
 // Necessary Plugins
-var gulp         = require('gulp');
-var plumber      = require('gulp-plumber');
-var stylus       = require('gulp-stylus');
-var postcss      = require('gulp-postcss');
-var autoprefixer = require('autoprefixer');
-var mqpacker     = require('css-mqpacker');
-var csswring     = require('csswring');
-var csscomb      = require('gulp-csscomb');
-var paths        = require('../paths');
+const gulp         = require('gulp');
+const plumber      = require('gulp-plumber');
+const stylus       = require('gulp-stylus');
+const postcss      = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const mqpacker     = require('css-mqpacker');
+const csswring     = require('csswring');
+const csscomb      = require('gulp-csscomb');
+const paths        = require('../paths');
 
 // Call Stylus
 module.exports = gulp.task('stylus', () => {
-  var processors = [
+  const processors = [
     autoprefixer({ browsers: ['last 3 versions'] }),
     mqpacker,
     csswring

@@ -17,9 +17,9 @@
 'use strict';
 
 // Necessary Plugins
-var gulp    = require('gulp');
-var plumber = require('gulp-plumber');
-var paths   = require('../paths');
+const gulp    = require('gulp');
+const plumber = require('gulp-plumber');
+const paths   = require('../paths');
 
 // Call Font Awesome
 gulp.task('fontAwesome', () => {

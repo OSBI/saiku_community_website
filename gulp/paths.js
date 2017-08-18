@@ -23,8 +23,9 @@ module.exports = {
     js: './src/js/**/*.js',
     styl: './src/styl/**/*.styl',
     img: './src/images/**/*',
+    favicon: './src/images/favicon.png',
     files: {
-      copy: ['./src/humans.txt', './src/favicon.ico'],
+      copy: ['./src/humans.txt'],
       jade: './src/templates/index.jade',
       styl: './src/styl/main.styl'
     }

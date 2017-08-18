@@ -17,13 +17,13 @@
 'use strict';
 
 // Necessary Plugins
-var gulp        = require('gulp');
-var browserSync = require('browser-sync');
-var paths       = require('../paths');
+const gulp        = require('gulp');
+const browserSync = require('browser-sync');
+const paths       = require('../paths');
 
 // Serve files from /www/
 module.exports = gulp.task('browser-sync', () => {
-  var files = [
+  const files = [
     paths.browserSync.html,
     paths.browserSync.js,
     paths.browserSync.css,

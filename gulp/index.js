@@ -16,10 +16,10 @@
 
 'use strict';
 
-var gulp  = require('gulp');
-var fs    = require('fs');
-var path  = require('path');
-var tasks = fs.readdirSync('./gulp/tasks');
+const gulp  = require('gulp');
+const fs    = require('fs');
+const path  = require('path');
+const tasks = fs.readdirSync('./gulp/tasks');
 
 tasks.forEach((task) => {
   require(path.join(__dirname, 'tasks', task));

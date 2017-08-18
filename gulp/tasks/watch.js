@@ -17,12 +17,12 @@
 'use strict';
 
 // Necessary Plugins
-var gulp  = require('gulp');
-var paths = require('../paths');
+const gulp  = require('gulp');
+const paths = require('../paths');
 
 // Call Watch
 module.exports = gulp.task('watch', () => {
-  gulp.watch(paths.source.templates, ['jade']);
+  gulp.watch(paths.source.templates, ['jade', 'favicon-install']);
   gulp.watch(paths.source.js, ['js']);
   gulp.watch(paths.source.styl, ['stylus']);
   gulp.watch(paths.source.img, ['imagemin']);

@@ -17,8 +17,8 @@
 'use strict';
 
 // Necessary Plugins
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 // Default task
 module.exports = gulp.task('default', ['js', 'jade', 'stylus', 'imagemin',
-  'copy-files', 'assets-install', 'watch', 'browser-sync']);
+  'copy-files', 'assets-install', 'favicon-install', 'watch', 'browser-sync']);

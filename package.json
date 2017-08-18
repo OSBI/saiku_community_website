@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
-    "browser-sync": "^2.18.12",
+    "browser-sync": "^2.18.13",
     "css-mqpacker": "^6.0.1",
     "csswring": "^6.0.0",
     "gulp": "^3.9.1",
@@ -61,6 +61,7 @@
     "gulp-jade": "^1.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
+    "gulp-real-favicon": "^0.2.2",
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^3.0.0"
   },
