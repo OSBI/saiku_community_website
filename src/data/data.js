@@ -1,5 +1,5 @@
 /**
- *   Copyright 2016 OSBI Ltd
+ *   Copyright 2011 - 2017 OSBI Ltd
  *
  *   Licensed under the Apache License, Version 2.0 (the "License");
  *   you may not use this file except in compliance with the License.
@@ -75,16 +75,16 @@ module.exports = {
     },
     {
       title: 'Wiki',
-      subtitle: 'wiki.meteorite.bi',
+      subtitle: 'saiku-documentation.readthedocs.io',
       icon: 'file-text-o',
       url: 'http://saiku-documentation.readthedocs.io/en/latest/',
       id: null
     },
     {
-      title: 'JIRA',
-      subtitle: 'jira.meteorite.bi',
+      title: 'GitHub Issues',
+      subtitle: 'github.com/OSBI/saiku/issues',
       icon: 'bug',
-      url: 'http://jira.meteorite.bi/secure/Dashboard.jspa',
+      url: 'https://github.com/OSBI/saiku/issues/new',
       id: null
     },
     {
@@ -117,13 +117,6 @@ module.exports = {
         lastName: 'Catão',
         url: 'https://github.com/brunogamacatao',
         image: 'https://avatars2.githubusercontent.com/u/785116?v=3&s=50'
-      },
-      {
-        name: 'Luis E. Garcia',
-        firstName: 'Luis E.',
-        lastName: 'Garcia',
-        url: 'https://github.com/PeterFalken',
-        image: 'https://avatars2.githubusercontent.com/u/2557898?v=3&s=50'
       },
       {
         name: 'Tom Barber',

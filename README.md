@@ -27,24 +27,31 @@ $ gulp
 ### Tasks
 
 - `gulp`: Initialize watch for changes and a server ([localhost:3000](http://localhost:3000/));
-- `gulp assets-install`: Call for install assets;
-- `gulp copy-files`: Call for copy files;
+- `gulp assets-install`: Call to install assets;
+- `gulp copy-files`: Call to copy files;
 - `gulp js`: Execute js files;
 - `gulp stylus`: Compile stylus files;
 - `gulp imagemin`: Compress image files;
-- `gulp watch`: Call for watch files;
+- `gulp watch`: Call to watch files;
 - `gulp jade`: Compile jade files;
+- `gulp favicon-install`: Call to generate favicon;
 - `gulp browser-sync`: Serve files from `/www/`.
+
+## Browser Support
+
+We do care about it.
+
+![Edge](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![Chrome](https://raw.github.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/src/safari/safari_48x48.png)
+--- | --- | --- | --- | --- |
+Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 
 ## Contributing
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -m "Add some feature"`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request  :)
+If you want to help, please read the [Contributing](https://github.com/OSBI/saiku_community_website/blob/master/CONTRIBUTING.md) guide.
 
-English is the universal language nowadays, so please don't create or comment on issues using another language.
+## History
+
+For detailed changelog, see [Releases](https://github.com/OSBI/saiku_community_website/releases).
 
 ## License
 
