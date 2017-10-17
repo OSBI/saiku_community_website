@@ -22,3 +22,7 @@ const gulp = require('gulp');
 // Default task
 module.exports = gulp.task('default', ['js', 'jade', 'stylus', 'imagemin',
   'copy-files', 'assets-install', 'favicon-install', 'watch', 'browser-sync']);
+
+// Build
+module.exports = gulp.task('build', ['js', 'jade', 'stylus', 'imagemin',
+  'copy-files', 'assets-install', 'favicon-install']);
