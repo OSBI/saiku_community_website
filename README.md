@@ -39,13 +39,12 @@ $ gulp
 - `gulp browser-sync`: Serve files from `/www/`.
 
 
-### :whale: How to use the `Dockerfile`
+### How to use the `Dockerfile` :whale:
 
 You can then build and run the Docker image:
 
 ```sh
 $ docker build -t saiku-community-website .
-
 $ docker run -d saiku-community-website
 ```
 
