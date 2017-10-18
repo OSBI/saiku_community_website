@@ -27,6 +27,7 @@ $ gulp
 ### Tasks
 
 - `gulp`: Initialize watch for changes and a server ([localhost:3000](http://localhost:3000/));
+- `gulp build`: Build website;
 - `gulp assets-install`: Call to install assets;
 - `gulp copy-files`: Call to copy files;
 - `gulp js`: Execute js files;
@@ -36,6 +37,17 @@ $ gulp
 - `gulp jade`: Compile jade files;
 - `gulp favicon-install`: Call to generate favicon;
 - `gulp browser-sync`: Serve files from `/www/`.
+
+
+### :whale: How to use the `Dockerfile`
+
+You can then build and run the Docker image:
+
+```sh
+$ docker build -t saiku-community-website .
+
+$ docker run -d saiku-community-website
+```
 
 ## Browser Support
 
