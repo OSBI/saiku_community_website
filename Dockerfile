@@ -24,7 +24,7 @@ RUN \
   npm un -g gulp && \
   echo "daemon off;" >> /etc/nginx/nginx.conf
 
-ADD nginx.conf /etc/nginx/sites-enabled/default
+COPY nginx.conf /etc/nginx/sites-enabled/default
 
 EXPOSE 8080
 
