@@ -24,6 +24,7 @@ module.exports = {
     styl: './src/styl/**/*.styl',
     img: './src/images/**/*',
     favicon: './src/images/favicon.png',
+    docs: './docs/**/*',
     files: {
       copy: ['./src/humans.txt'],
       jade: './src/templates/index.jade',
@@ -44,6 +45,7 @@ module.exports = {
     css: './build/css',
     js: './build/js',
     img: './build/images',
-    fonts: './build/fonts'
+    fonts: './build/fonts',
+    docs: './build/docs'
   }
 };

@@ -17,13 +17,13 @@
 'use strict';
 
 // Necessary Plugins
-const gulp = require('gulp');
+const gulp    = require('gulp');
+const plumber = require('gulp-plumber');
+const paths   = require('../paths');
 
-// Default task
-module.exports = gulp.task('default', ['js', 'jade', 'stylus', 'imagemin',
-  'copy-files', 'copy-docs', 'assets-install', 'favicon-install', 'watch',
-  'browser-sync']);
-
-// Build
-module.exports = gulp.task('build', ['js', 'jade', 'stylus', 'imagemin',
-  'copy-files', 'copy-docs', 'assets-install', 'favicon-install']);
+// Call Copy docs/
+module.exports = gulp.task('copy-docs', () => {
+  return gulp.src(paths.source.docs)
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.build.docs));
+});
