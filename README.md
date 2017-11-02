@@ -30,6 +30,7 @@ $ gulp
 - `gulp build`: Build website;
 - `gulp assets-install`: Call to install assets;
 - `gulp copy-files`: Call to copy files;
+- `gulp copy-docs`: Call Copy `docs/` folder;
 - `gulp js`: Execute js files;
 - `gulp stylus`: Compile stylus files;
 - `gulp imagemin`: Compress image files;

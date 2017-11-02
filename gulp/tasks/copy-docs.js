@@ -21,7 +21,7 @@ const gulp    = require('gulp');
 const plumber = require('gulp-plumber');
 const paths   = require('../paths');
 
-// Call Copy docs/
+// Call Copy `docs/` folder
 module.exports = gulp.task('copy-docs', () => {
   return gulp.src(paths.source.docs)
     .pipe(plumber())
