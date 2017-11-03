@@ -55,7 +55,7 @@
     "css-mqpacker": "^6.0.1",
     "csswring": "^6.0.1",
     "gulp": "^3.9.1",
-    "gulp-cache": "^0.4.6",
+    "gulp-cache": "^1.0.1",
     "gulp-csscomb": "^3.0.8",
     "gulp-imagemin": "^3.4.0",
     "gulp-jade": "^1.1.0",
