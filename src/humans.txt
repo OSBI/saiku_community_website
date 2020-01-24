@@ -19,30 +19,6 @@ effectively to allow users to explore data in real time.
 
 ________________________________________________________________________________________________________________
 
-  _____                    _
- |  __ \                  | |
- | |  | | ___  _ __   __ _| |_ ___
- | |  | |/ _ \| '_ \ / _` | __/ _ \
- | |__| | (_) | | | | (_| | ||  __/
- |_____/ \___/|_| |_|\__,_|\__\___|
-
-
-Sponsor Saiku Analytics!
-
-Building, testing and deploying Saiku Community Edition costs both time and money.
-
-If you use Saiku CE in your business, please consider donating to the project. The servers we run,
-the software we build and release under the Apache License, we do so because we love the open source
-model and we believe in giving back as well as consuming other developers code.
-
-Without donations to the project, it makes releasing Saiku under an open source license very difficult
-because we have bills to pay and families to feed! So please consider funding open source development
-and helping Saiku prosper and grow further.
-
-http://www.meteorite.bi/products/saiku/sponsorship
-
-________________________________________________________________________________________________________________
-
 Contacts:
 
 It doesn't matter where you are in the world, we are always happy to hear from people.

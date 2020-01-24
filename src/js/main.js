@@ -105,7 +105,7 @@
     var windowOpen;
 
     if (customValue != null && customValue > 0) {
-      windowOpen = window.open('http://sites.fastspring.com/meteoriteconsulting/product/cedownloadcustom?tags=total=' + (customValue * 100), '_blank')
+      windowOpen = window.open('https://sites.fastspring.com/meteoriteconsulting/product/cedownloadcustom?tags=total=' + (customValue * 100), '_blank')
 
       if (windowOpen) {
         // Browser has allowed it to be opened

@@ -56,7 +56,7 @@ module.exports = {
       title: 'Docs REST API',
       subtitle: 'community.meteorite.bi/docs/',
       icon: 'file-code-o',
-      url: 'http://community.meteorite.bi/docs/',
+      url: 'https://community.meteorite.bi/docs/',
       id: null
     },
     {
@@ -77,7 +77,7 @@ module.exports = {
       title: 'Wiki',
       subtitle: 'saiku-documentation.readthedocs.io',
       icon: 'file-text-o',
-      url: 'http://saiku-documentation.readthedocs.io/en/latest/',
+      url: 'https://saiku-documentation.readthedocs.io/en/latest/',
       id: null
     },
     {
@@ -91,14 +91,14 @@ module.exports = {
       title: 'Stack Overflow',
       subtitle: 'stackoverflow.com/saiku',
       icon: 'stack-overflow',
-      url: 'http://stackoverflow.com/questions/tagged/saiku',
+      url: 'https://stackoverflow.com/questions/tagged/saiku',
       id: null
     },
     {
       title: 'Freenode IRC',
       subtitle: 'Channel: #saiku',
       icon: 'comments',
-      url: 'http://webchat.freenode.net/?randomnick=1&channels=%23%23saiku',
+      url: 'https://webchat.freenode.net/?randomnick=1&channels=%23%23saiku',
       id: null
     }
   ],
