@@ -2,7 +2,7 @@
   "name": "saiku_community_website",
   "description": "Saiku Analytics - The world's greatest open source OLAP browser",
   "homepage": "https://github.com/OSBI/saiku_community_website#readme",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "author": {
     "name": "Meteorite BI",
     "email": "info@meteorite.bi",

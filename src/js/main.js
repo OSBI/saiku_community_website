@@ -117,7 +117,7 @@
       }
     }
     else if (customValue != null && customValue == 0) {
-      window.location.href = 'http://meteorite.bi/downloads/saiku-latest.zip';
+      window.location.href = 'http://downloads.meteorite.bi/saiku3/saiku-latest.zip';
     }
     else {
       alert('Invalid value!');
